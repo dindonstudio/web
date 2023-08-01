@@ -1,0 +1,14 @@
+.container {
+	// @include desktop {
+	// 	margin-bottom: 7rem;
+	// }
+}
+
+.header {
+	background-color: $greyLight;
+	padding: 8rem span(1) span(2);
+
+	@include desktop {
+		padding: 15rem span(2) span(2);
+	}
+}

@@ -1,0 +1,87 @@
+.testament {
+	position: relative;
+	z-index: 1;
+	padding: 4rem span(1) span(1);
+
+	@include desktop {
+		width: span(7.5);
+		padding: span(0.75) span(0.5) span(0.5) span(0.75);
+	}
+}
+
+.profilePicture {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 50%;
+	width: span(2);
+	margin: span(-1) 0 0 span(-1);
+
+	@include desktop {
+		left: span(1);
+		width: span(1);
+		margin: span(-0.5) 0 0;
+	}
+
+	img {
+		border-radius: 50%;
+	}
+}
+
+.text,
+.signature {
+	position: relative;
+	z-index: 1;
+}
+
+.signature {
+	display: block;
+	margin-top: 1.5rem;
+	opacity: 0.4;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.background {
+	position: absolute;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.2;
+	background: $white;
+	border-radius: 0.8rem;
+
+	&::after {
+		content: '';
+		display: block;
+		position: relative;
+		left: 50%;
+		width: span(2.4);
+		height: span(2.4);
+		margin: span(-1.2) 0 0 span(-1.2);
+		background: $white;
+		border-radius: 50%;
+
+		@include desktop {
+			left: span(0.9);
+			width: span(1.2);
+			height: span(1.2);
+			margin: span(-0.6) 0 0;
+		}
+	}
+}
+
+.dark {
+	color: $white;
+
+	.background {
+		opacity: 1;
+		background: $greenDark;
+
+		&::after {
+			background: $greenDark;
+		}
+	}
+}

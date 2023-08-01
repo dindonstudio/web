@@ -1,0 +1,22 @@
+%fullWidth {
+	width: calc(100vw - var(--sbw));
+
+	@include desktop {
+		margin-left: calc(-50vw + span($columns-desktop) / 2 + var(--sbw) / 2) !important;
+	}
+}
+
+%fullWidthWithNav {
+	@include desktop {
+		width: calc(100vw - var(--sbw));
+		margin-left: calc(-50vw - span(11) + span($columns-desktop) / 2 + var(--sbw) / 2) !important;
+	}
+}
+
+%fullscreen {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}

@@ -1,0 +1,67 @@
+.bulletPoints {
+	flex: 0 0 auto;
+	margin-top: 5rem;
+
+	@include mobile {
+		padding: 0 span(2);
+		text-align: center;
+	}
+
+	@include desktop {
+		width: span(9);
+		margin-top: 0;
+	}
+}
+
+.title {
+	margin-bottom: 3rem;
+
+	@include desktop {
+		margin-bottom: 5.5rem;
+	}
+}
+
+.feature {
+	display: inline-flex;
+	align-items: center;
+	margin-bottom: 3rem;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	svg {
+		flex: 0 0 auto;
+		margin-right: 1.3rem;
+	}
+}
+
+.cta {
+	margin-top: 3rem;
+
+	@include desktop {
+		margin-top: 5.5rem;
+	}
+}
+
+.horizontal {
+	@include desktop {
+		display: flex;
+		align-items: center;
+	}
+
+	.title {
+		@include desktop {
+			width: span(7.5);
+			flex-shrink: 0;
+			margin-right: span(4);
+			margin-bottom: 0;
+		}
+	}
+
+	.feature {
+		@include desktop {
+			width: span(7.5);
+		}
+	}
+}

@@ -1,0 +1,152 @@
+.footer {
+	width: 100%;
+	padding: 0 span(1);
+	background: $white;
+
+	@include desktop {
+		padding: 0 span(1);
+	}
+
+	&Wrap {
+		position: relative;
+		z-index: 1;
+	}
+}
+
+.container {
+	position: relative;
+	padding: 3.6rem 0 4rem;
+
+	@include desktop {
+		padding: 5.6rem 0 5rem;
+	}
+}
+
+.top {
+	display: flex;
+	align-items: flex-end;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.logo svg {
+	width: 8.4rem;
+	height: auto;
+
+	@include tablet {
+		width: 100px;
+	}
+
+	@include desktop {
+		width: 10rem;
+	}
+}
+
+.slogan {
+	@include desktop {
+		padding-bottom: 0.8rem;
+	}
+}
+
+.content {
+	margin-top: 14.4rem;
+
+	@include tablet {
+		margin-top: 160px;
+	}
+
+	@include desktop {
+		display: flex;
+		align-items: flex-end;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-top: 23.5rem;
+		border-top: 1px solid;
+	}
+}
+
+.link {
+	font-size: clampfont(1.3rem);
+	line-height: 1.2;
+}
+
+.nav,
+.bottom {
+	padding-top: 3.6rem;
+
+	@include tablet {
+		padding-top: 40px;
+	}
+
+	@include desktop {
+		padding-top: 3rem;
+	}
+}
+
+.nav {
+	display: flex;
+	flex-wrap: wrap;
+
+	@include mobile {
+		border-top: 1px solid;
+	}
+
+	@include desktop {
+		width: span(12);
+	}
+
+	ul {
+		flex: 1;
+		padding-right: span(1);
+
+		@include desktop {
+			padding-right: span(1);
+		}
+
+		li {
+			margin-top: 1.3rem;
+			font-size: 0;
+
+			@include tablet {
+				margin-top: 15px;
+			}
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+.socialLinks {
+	@include mobile {
+		flex: 0 0 span(3);
+		padding-right: 0;
+	}
+}
+
+.bottom {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 4rem;
+	font-size: clampfont(1rem);
+	line-height: 1;
+
+	@include mobile {
+		justify-content: space-between;
+		border-top: 1px solid;
+	}
+
+	@include tablet {
+		margin-top: 50px;
+	}
+
+	@include desktop {
+		margin-top: 0;
+		padding-bottom: 0.4rem;
+	}
+
+	.credits {
+		margin-right: 2rem;
+	}
+}

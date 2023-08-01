@@ -1,0 +1,46 @@
+.background {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	overflow: clip;
+	pointer-events: none;
+
+	&.fixed {
+		position: fixed;
+
+		// touch devices
+		@include touch {
+			position: absolute;
+		}
+	}
+
+	&.overflowVisible {
+		overflow: inherit;
+	}
+}
+
+.circleWrapper {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+}
+
+.circle {
+	width: 100%;
+	opacity: 0.9;
+	border-radius: 50%;
+	filter: blur(40px);
+	//will-change: transform;
+
+	&::after {
+		content: '';
+		display: block;
+		padding-bottom: 100%;
+	}
+}

@@ -1,0 +1,52 @@
+.portfolio {
+	overflow: hidden;
+
+	@include mobile {
+		overflow: hidden;
+	}
+}
+
+.background {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	@include desktop {
+		position: fixed;
+	}
+
+	.circle {
+		@include desktop {
+			top: -12rem;
+			right: span(3);
+			left: auto;
+			width: 180rem;
+		}
+	}
+}
+
+.dealflow {
+	opacity: 0;
+
+	@include desktop {
+		position: fixed;
+		z-index: -1;
+		top: 50%;
+		left: 50%;
+		margin-left: span(-10);
+		transform: translate(0, -50%);
+	}
+
+	&Logo {
+		height: auto;
+		opacity: 0.2;
+		color: $white;
+
+		@include desktop {
+			width: span(15);
+		}
+	}
+}

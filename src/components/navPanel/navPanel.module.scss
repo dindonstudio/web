@@ -1,0 +1,50 @@
+.navPanel {
+	position: fixed;
+	z-index: 0;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+	visibility: hidden;
+	-webkit-overflow-scrolling: touch;
+	background-color: $white;
+	color: $purple;
+	transition: transform 1s $quart-inout, visibility 1s;
+
+	&.isOpen {
+		visibility: inherit;
+		transform: translateY(-100%) translateZ(0);
+		transition-timing-function: $expo-out;
+	}
+
+	.primaryLink {
+		margin-bottom: 2.5rem;
+		font-size: clampfont(3rem);
+
+		@include tablet {
+			margin-bottom: 35px;
+		}
+	}
+
+	.login {
+		--color: #{$purple};
+		--background-color: #{$purple};
+	}
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 100%;
+	padding: 14rem span(1) 3.5rem;
+
+	@include tablet {
+		padding-top: 160px;
+	}
+}
+
+.bottom {
+	margin-top: 4rem;
+}

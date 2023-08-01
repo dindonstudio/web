@@ -1,0 +1,66 @@
+.homePerks {
+	overflow: hidden;
+	margin-top: -1px;
+	background: $white;
+}
+
+.buttons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 3.5rem;
+
+	@include mobile {
+		flex-direction: column;
+	}
+
+	@include desktop {
+		margin-top: 5rem;
+	}
+
+	.button {
+		margin-bottom: 1.5rem;
+
+		@include desktop {
+			margin-right: 1.5rem;
+		}
+	}
+}
+
+.perks {
+	padding: 5rem span(1) 7rem;
+
+	@include desktop {
+		padding: 10rem span(1) 18rem;
+	}
+}
+
+.perk {
+	width: span(12);
+	margin-right: span(1);
+	padding: 6rem span(1) 8rem;
+	border-radius: 2rem;
+
+	@include desktop {
+		width: span(11);
+		margin-right: span(0.5);
+		padding: 10rem span(1.5) 15rem;
+	}
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	.logo,
+	.title {
+		margin-bottom: 3rem;
+	}
+
+	.logo {
+		width: span(2);
+
+		@include desktop {
+			width: span(1);
+		}
+	}
+}

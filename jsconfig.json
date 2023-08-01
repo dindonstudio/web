@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+		"target": "es6",
+		"baseUrl": "./src",
+    "paths": {
+      "@config/*": ["../../config/*"]
+    },
+		"checkJs": true,
+		"jsx": "react-jsx"
+	},
+	"exclude": [
+		".cache",
+		".vscode",
+		"out",
+		"public",
+		"styles",
+		"**/node_modules/*",
+		"misc"
+	]
+}

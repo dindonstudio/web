@@ -1,0 +1,102 @@
+.aboutPerks {
+	background-color: $white;
+
+	@include mobile {
+		text-align: center;
+	}
+
+	.container {
+		padding: 7.2rem span(1) 8rem;
+
+		@include tablet {
+			padding: 80px span(1) 100px;
+		}
+
+		@include desktop {
+			padding: 13rem span(2) 13rem span(4);
+		}
+	}
+}
+
+.perk {
+	margin-bottom: 6rem;
+
+	@include tablet {
+		margin-bottom: 100px;
+	}
+
+	@include desktop {
+		display: flex;
+		align-items: center;
+		margin-bottom: 12rem;
+
+		&:nth-child(even) {
+			.perkImageWrap {
+				order: 2;
+				margin-right: 0;
+				margin-left: span(2.5);
+			}
+		}
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&Image {
+		@include desktop {
+			position: absolute;
+			top: -10%;
+			right: 0;
+			left: 0;
+			height: 120%;
+		}
+
+		&Wrap {
+			position: relative;
+			z-index: 0;
+			overflow: hidden;
+			border-radius: 1rem;
+
+			@include tablet {
+				margin: 0 span(1);
+			}
+
+			@include desktop {
+				width: span(9);
+				margin-right: span(4);
+
+				&::before {
+					content: '';
+					display: block;
+					padding-top: math.percentage(math.div(520, 432));
+				}
+			}
+		}
+	}
+
+	&Text {
+		margin: 6rem span(1) 0;
+
+		@include tablet {
+			margin-top: 100px;
+		}
+
+		@include desktop {
+			width: span(10.5);
+			margin: 0;
+		}
+	}
+
+	&Link {
+		margin-top: 3rem;
+
+		@include tablet {
+			margin-top: 30px;
+		}
+
+		@include desktop {
+			margin-top: 2rem;
+		}
+	}
+}

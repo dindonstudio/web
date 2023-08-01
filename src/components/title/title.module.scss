@@ -1,0 +1,9 @@
+.title {
+	&.center {
+		text-align: center;
+	}
+
+	& div:not(:first-of-type) {
+		font-weight: 500;
+	}
+}

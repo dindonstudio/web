@@ -1,0 +1,97 @@
+.slideshow {
+	position: relative;
+	width: 100%;
+}
+
+.wrapper {
+	position: relative;
+	z-index: 1;
+	cursor: grab;
+	user-select: none;
+	touch-action: pan-y;
+
+	&:active {
+		cursor: grabbing;
+	}
+
+	&.overflowHidden {
+		overflow: hidden;
+	}
+}
+
+.list {
+	display: inline-flex;
+	outline: none;
+
+	& > * {
+		flex-shrink: 0;
+	}
+}
+
+.btn {
+	position: absolute;
+	z-index: 20;
+	top: 91%;
+	margin: 0 0.5rem;
+	color: $white;
+	transform: translate(0, -50%);
+
+	@include desktop {
+		top: 85%;
+	}
+
+	svg {
+		margin: 0 !important;
+	}
+
+	&Next {
+		left: 50%;
+	}
+
+	&Prev {
+		right: 50%;
+
+		svg {
+			transform: scaleX(-1);
+		}
+	}
+}
+
+.dots {
+	margin-top: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 14px;
+
+	@include desktop {
+		margin-top: 4rem;
+		gap: 6px;
+	}
+
+	.dot {
+		width: 5px;
+		height: 5px;
+		border: 1px solid $greenDark;
+		background-color: transparent;
+		border-radius: 50%;
+
+		@include desktop {
+			width: 13px;
+			height: 13px;
+		}
+
+		&Wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 13px;
+			height: 13px;
+			cursor: pointer;
+		}
+
+		&Selected {
+			background-color: $greenDark;
+		}
+	}
+}

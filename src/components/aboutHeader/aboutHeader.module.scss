@@ -1,0 +1,173 @@
+.aboutHeader {
+	text-align: center;
+
+	@include mobile {
+		position: relative;
+	}
+}
+
+.intro {
+	position: relative;
+	z-index: 1;
+	color: $white;
+
+	&Text {
+		margin: 0 span(1);
+
+		@include desktop {
+			margin: 0 span(6);
+		}
+
+		u {
+			color: $green;
+			text-decoration-thickness: 0.06em;
+			text-underline-offset: 0.06em;
+		}
+	}
+
+	.dealflowLogo {
+		height: auto;
+		margin-bottom: 2rem;
+		color: $yellow;
+
+		@include tablet {
+			width: 28px;
+		}
+	}
+}
+
+.main {
+	position: relative;
+	z-index: 0;
+
+	.container {
+		padding: 8rem 0;
+
+		@include tablet {
+			padding: 0 0 12rem;
+		}
+
+		@include desktop {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding: 20rem 0;
+
+			@include touch {
+				min-height: 80rem;
+			}
+		}
+	}
+
+	.titleLine {
+		position: relative;
+		z-index: 0;
+		margin: 0 span(1.5);
+		line-height: 1.2;
+		text-align: center;
+
+		&1 {
+			z-index: 2;
+		}
+
+		span {
+			display: block;
+		}
+
+		.whiteText {
+			color: $white;
+			pointer-events: none;
+
+			@include desktop {
+				position: absolute;
+				top: 0;
+				right: 0;
+				left: 0;
+				mask-position: 50% 80%;
+				mask-repeat: no-repeat;
+				mask-size: span(7);
+			}
+		}
+
+		@include no-touch {
+			margin: 0;
+		}
+	}
+
+	.portrait {
+		width: 100%;
+		order: -1;
+		margin-bottom: 3rem;
+		pointer-events: none;
+
+		@include tablet {
+			margin-bottom: 5rem;
+		}
+
+		@include desktop {
+			position: absolute;
+			z-index: 2;
+			top: 50%;
+			left: 50%;
+			width: span(12);
+			margin-top: -7rem;
+			transform: translate3d(-50%, -50%, 0);
+		}
+
+		&Image {
+			width: span(10);
+
+			@include tablet {
+				width: span(8);
+			}
+
+			@include desktop {
+				width: span(7);
+			}
+		}
+	}
+
+	.circle {
+		top: 50%;
+		left: 50%;
+		width: 160%;
+		transform: translate(-50%, -50%);
+
+		@include tablet {
+			width: 100%;
+		}
+
+		@include desktop {
+			width: span(18);
+		}
+	}
+
+	@include no-touch {
+		display: block;
+		height: auto;
+	}
+}
+
+.dealflowStroke {
+	z-index: -1;
+	top: -5rem;
+	left: 50%;
+	opacity: 0.05;
+	pointer-events: none;
+
+	@include desktop {
+		position: fixed;
+		width: span(16);
+		margin-left: span(-7.5);
+	}
+
+	.logo {
+		width: 100%;
+		height: auto;
+		//will-change: opacity;
+	}
+
+	path {
+		stroke: $white;
+	}
+}

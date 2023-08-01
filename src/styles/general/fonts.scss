@@ -1,0 +1,19 @@
+@font-face {
+	font-family: optima;
+	src:
+		url('/fonts/optima_roman-web.woff2') format('woff2'),
+		url('/fonts/optima_roman-web.woff') format('woff');
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: generalsans;
+	src:
+		url('/fonts/generalsans-regular-web.woff2') format('woff2'),
+		url('/fonts/generalsans-regular-web.woff') format('woff');
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+}

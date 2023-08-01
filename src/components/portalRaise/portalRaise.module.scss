@@ -1,0 +1,26 @@
+.portalRaise {
+	position: relative;
+}
+
+.digits {
+	margin: 0 0 2rem span(-7.7);
+
+	@include desktop {
+		margin: 0 0 15rem span(0.5);
+	}
+}
+
+.bulletPoints {
+	margin-bottom: 9rem;
+
+	@include desktop {
+		margin: 0 0 19rem span(4);
+	}
+}
+
+.circle {
+	@include desktop {
+		left: span(-4);
+		width: 120rem;
+	}
+}

@@ -1,0 +1,79 @@
+::selection {
+	background: #999;
+	color: $white;
+}
+
+html {
+	--sbw: 0px;
+
+	font-size: #{math.div(1000, strip-unit($mobile-mockup-width))}vw; // old browser fallback
+	font-size: calc(#{math.div(1000, strip-unit($mobile-mockup-width))}vw - var(--sbw) / #{math.div(strip-unit($mobile-mockup-width), 10)});
+
+	@include mobile-landscape {
+		font-size: 10px;
+	}
+
+	@include tablet {
+		font-size: #{math.div(1000, strip-unit($tablet-mockup-width))}vw;
+		font-size: calc(#{math.div(1000, strip-unit($tablet-mockup-width))}vw - var(--sbw) / #{math.div(strip-unit($tablet-mockup-width), 10)});
+	}
+
+	@include desktop {
+		font-size: #{math.div(1000, strip-unit($desktop-mockup-width))}vw; // old browser fallback
+		font-size: calc(#{math.div(1000, strip-unit($desktop-mockup-width))}vw - var(--sbw) / #{math.div(strip-unit($desktop-mockup-width), 10)}); // no min support browser fallback
+		font-size: min(calc(#{math.div(1000, strip-unit($desktop-mockup-width))}vw - var(--sbw) / #{math.div(strip-unit($desktop-mockup-width), 10)}), #{10px * math.div($max-width, $desktop-mockup-width)});
+	}
+}
+
+body {
+	overflow-x: hidden;
+	overflow-y: scroll;
+	color: $greenDark;
+
+	&.noScroll {
+		padding-right: var(--sbw);
+
+		&::before {
+			right: var(--sbw, 0);
+		}
+	}
+
+	@include font-smoothing(on);
+}
+
+* {
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.is-loading * {
+	cursor: progress !important;
+}
+
+.mobile-only {
+	@include desktop {
+		display: none !important;
+	}
+}
+
+.desktop-only {
+	@include mobile {
+		display: none !important;
+	}
+}
+
+.touch-only {
+	@include no-touch {
+		display: none !important;
+	}
+}
+
+.no-touch-only {
+	@include touch {
+		display: none !important;
+	}
+}
+
+.fullscreen {
+	@extend %fullscreen;
+}

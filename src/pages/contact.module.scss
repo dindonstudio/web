@@ -1,0 +1,58 @@
+.contact {
+	background-color: $white;
+}
+
+.container {
+	padding-top: 13rem;
+
+	@include desktop {
+		padding-top: 21.5rem;
+	}
+}
+
+.header {
+	margin: 0 span(1) 6rem;
+
+	@include mobile {
+		text-align: center;
+	}
+
+	@include desktop {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin: 0 span(4) 8rem;
+	}
+
+	&Title {
+		@include desktop {
+			width: span(7);
+		}
+	}
+
+	&Descr {
+		margin: 2.6rem span(1);
+
+		@include desktop {
+			width: span(8);
+			margin: 0 span(1) 0 0;
+		}
+
+		svg {
+			display: block;
+			color: $green;
+		}
+	}
+
+	.dealflowLogo {
+		margin-bottom: 2rem;
+	}
+}
+
+.formWrap {
+	margin: 0 span(1) 6rem;
+
+	@include desktop {
+		margin: 0 span(4) 12rem;
+	}
+}

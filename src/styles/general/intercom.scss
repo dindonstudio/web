@@ -1,0 +1,18 @@
+.intercom-launcher-frame,
+.intercom-launcher {
+	bottom: span(1) !important;
+	right: span(1) !important;
+
+	@include desktop {
+		bottom: 2rem !important;
+		right: 2rem !important;
+	}
+
+	.noScroll & {
+		right: calc(#{span(1)} + var(--sbw)) !important;
+
+		@include desktop {
+			right: calc(2rem + var(--sbw)) !important;
+		}
+	}
+}

@@ -1,0 +1,94 @@
+// .featureIntro {
+// 	display: flex;
+// 	flex-direction: column-reverse;
+// 	text-align: center;
+
+// 	@include desktop {
+// 		height: 100vh;
+// 		align-items: center;
+// 		flex-direction: row;
+// 		justify-content: space-between;
+// 		min-height: 80rem;
+// 		text-align: left;
+// 	}
+// }
+
+// .image {
+// 	width: span(10);
+// 	margin: span(2) auto 0 auto;
+
+// 	@include desktop {
+// 		width: span(14);
+// 		margin: span(4) span(2) 0 0;
+// 	}
+// }
+
+// .dealflow {
+// 	display: inline-flex;
+// 	width: 7.4rem;
+// 	height: 7.4rem;
+// 	align-items: center;
+// 	justify-content: center;
+// 	margin-bottom: 3.4rem;
+// 	background: $white;
+// 	border-radius: 0.8rem;
+// 	box-shadow: 0px 0.8rem 3.2rem rgba(0, 0, 0, 0.17);
+
+// 	@include desktop {
+// 		width: 10rem;
+// 		height: 10rem;
+// 		margin-bottom: 3rem;
+// 	}
+
+// 	.logo {
+// 		width: 1.4rem;
+// 		height: auto;
+// 		color: $purple;
+
+// 		@include desktop {
+// 			width: 2.4rem;
+// 		}
+// 	}
+// }
+
+// .text {
+// 	@include mobile {
+// 		padding: 0 span(2);
+// 	}
+
+// 	@include desktop {
+// 		width: span(9);
+// 		margin-left: span(3);
+// 	}
+// }
+
+// .title {
+// 	margin-bottom: 3rem;
+// }
+
+// .excerpt {
+// 	@include desktop {
+// 		width: span(6);
+// 	}
+// }
+
+// .background {
+// 	@include desktop {
+// 		position: fixed !important;
+// 	}
+
+// 	.circle {
+// 		top: 4rem;
+// 		right: 50rem;
+// 		left: 50%;
+// 		width: 60rem;
+// 		margin-left: -30rem;
+
+// 		@include desktop {
+// 			top: -12rem;
+// 			right: -50rem;
+// 			left: auto;
+// 			width: 160rem;
+// 		}
+// 	}
+// }

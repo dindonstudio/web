@@ -1,0 +1,18 @@
+.ellipseClip {
+	position: relative;
+	clip-path: ellipse(50% 50% at 50% 50%);
+
+	&::before {
+		content: '';
+		display: block;
+		padding-top: 70%;
+	}
+
+	> * {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+}

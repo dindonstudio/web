@@ -1,0 +1,21 @@
+.tabsMenu {
+	display: flex;
+	justify-content: center;
+
+	nav {
+		position: relative;
+		padding: 0.4rem;
+		border: 2px solid rgba(33, 33, 33, 0.2);
+		border-radius: 9999px;
+
+		.navBg {
+			position: absolute;
+			background: $black;
+			border-radius: 9999px;
+			top: 0.4rem;
+			left: 0;
+			bottom: 0.4rem;
+			width: 10px;
+		}
+	}
+}

@@ -1,0 +1,72 @@
+.aboutClients {
+	--color-light: #{$white};
+
+	background: $white;
+
+	.container {
+		padding: 8rem 0 14rem;
+
+		@include tablet {
+			padding: 140px 0 180px;
+		}
+
+		@include desktop {
+			padding: 17.5rem 0 24rem;
+		}
+	}
+
+	.header {
+		@include mobile {
+			text-align: center;
+		}
+
+		@include desktop {
+			display: flex;
+			align-items: center;
+			margin: 0 span(4);
+		}
+	}
+
+	.title,
+	.description {
+		@include desktop {
+			width: span(7);
+		}
+	}
+
+	.title {
+		@include mobile {
+			margin: 0 span(1);
+		}
+
+		@include desktop {
+			margin-right: span(6);
+		}
+	}
+
+	.description {
+		@include mobile {
+			margin: 3rem span(2) 0;
+		}
+	}
+
+	.logos {
+		height: 4.4rem;
+		margin-top: 12rem;
+
+		@include tablet {
+			margin-top: 140px;
+		}
+
+		@include desktop {
+			height: 8rem;
+			margin-top: 23rem;
+		}
+
+		.logo {
+			@include mobile {
+				margin-right: 8.4rem;
+			}
+		}
+	}
+}

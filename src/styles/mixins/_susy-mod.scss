@@ -1,0 +1,66 @@
+@function span(
+	$span: 1,
+	$config: ()
+) {
+	$context: susy-compile(abs($span), $config);
+	$percentage: su-call('su-span', $context);
+
+	@if $mockup-width == $desktop-mockup-width {
+		$ratio: math.div($percentage * (1 - 2 * math.div($margin, $mockup-width)), 1%);
+		$rem: math.div($ratio * strip-unit($mockup-width), 1000) * 1rem;
+
+		@if $span != abs($span) {
+			$rem: $rem * -1;
+		}
+
+		@return $rem;
+	} @else {
+		$vw: math.div($percentage, 1%) * 1vw;
+
+		@if $span != abs($span) {
+			$vw: $vw * -1;
+		}
+
+		@return $vw;
+	}
+
+	// $vw: 0;
+	// @if $span != abs($span) {
+	// 	$vw: calc((#{math.div(1000, strip-unit($mockup-width))}vw - var(--sbw) / #{strip-unit($mockup-width)}) * -1);
+	// } @else {
+	// 	$vw: calc(#{math.div(1000, strip-unit($mockup-width))}vw - var(--sbw) / #{strip-unit($mockup-width)});
+	// }
+	// @return $vw;
+}
+
+@function gutter(
+	$gutter: null,
+	$config: ()
+) {
+	$context: susy-compile(abs($gutter), $config, 'context-only');
+	$percentage: su-call('su-gutter', $context);
+	// $vw: calc(#{math.div(1000, strip-unit($mockup-width))}vw - var(--sbw) / #{strip-unit($mockup-width)});
+
+	@if $percentage == 0 {
+		@return 0;
+	} @else {
+		@if $mockup-width == $desktop-mockup-width {
+			$ratio: math.div($percentage * (1 - 2 * math.div($margin, $mockup-width)), 1%);
+			$rem: math.div($ratio * strip-unit($mockup-width), 1000) * 1rem;
+
+			@if $gutter != abs($gutter) {
+				$rem: $rem * -1;
+			}
+
+			@return $rem;
+		} @else {
+			$vw: math.div($percentage, 1%) * 1vw;
+
+			@if $gutter != abs($gutter) {
+				$vw: $vw * -1;
+			}
+
+			@return $vw;
+		}
+	}
+}

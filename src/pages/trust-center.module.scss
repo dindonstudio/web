@@ -1,0 +1,226 @@
+.trustCenter {
+	.largeTitleCta {
+		&Image {
+			@include mobile {
+				width: 110%;
+				height: 110%;
+			}
+		}
+	}
+}
+
+.header {
+	overflow: hidden;
+	color: $white;
+
+	@include mobile {
+		position: relative;
+		text-align: center;
+	}
+
+	&Container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding-top: 14rem;
+
+		@include tablet {
+			padding-top: 180px;
+		}
+
+		@include desktop {
+			padding-top: 18.4rem;
+		}
+	}
+
+	.title {
+		font-size: clampfont(12rem);
+
+		@include mobile {
+			word-break: break-all;
+		}
+
+		@include desktop {
+			font-size: clampfont(36rem);
+			white-space: nowrap;
+		}
+
+		> div {
+			overflow: hidden;
+		}
+
+		span {
+			display: inline-block;
+		}
+	}
+
+	&Text {
+		flex-basis: 100%;
+		max-width: 100%;
+		margin: 5.6rem span(1) 6rem;
+
+		@include tablet {
+			margin: 60px span(1);
+		}
+
+		@include desktop {
+			display: flex;
+			justify-content: space-between;
+			margin: 6rem span(4);
+		}
+	}
+
+	.subtitle {
+		margin: 0 span(0.5) 5rem;
+
+		@include tablet {
+			margin-bottom: 60px;
+		}
+
+		@include desktop {
+			width: span(8);
+			margin: 0;
+			padding-top: 1rem;
+		}
+	}
+
+	.description {
+		margin: 0 span(1);
+
+		@include desktop {
+			width: span(9);
+			margin: 0;
+		}
+	}
+
+	.illu {
+		width: span($columns-mobile);
+		margin: -4rem 0;
+
+		@include tablet {
+			margin: -50px 0 -140px;
+		}
+
+		@include desktop {
+			width: span($columns-desktop);
+			margin: -5rem 0 -25rem;
+		}
+	}
+}
+
+.trustFeatures {
+	background-color: $white;
+}
+
+.features {
+	margin: 0 span(1);
+	padding: 1rem 0 7.6rem;
+
+	@include desktop {
+		margin: 0 span(4);
+		padding: 6rem 0 13rem;
+	}
+}
+
+.feature {
+	position: relative;
+	padding: 6.6rem 0 5.4rem;
+
+	@include mobile {
+		text-align: center;
+	}
+
+	@include tablet {
+		padding: 80px 0;
+	}
+
+	@include desktop {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		opacity: 0.1;
+		border-bottom: 1px solid;
+	}
+
+	&:last-child {
+		padding-bottom: 0;
+
+		&::after {
+			display: none;
+		}
+	}
+
+	&Icon {
+		width: span(2);
+		height: auto;
+		flex: 0 0 auto;
+		margin: 0 auto 3rem;
+
+		@include tablet {
+			width: 50px;
+			margin-bottom: 30px;
+		}
+
+		@include desktop {
+			width: span(1);
+			margin: 0 span(1) 0 0;
+		}
+	}
+
+	&Title {
+		margin-bottom: 2.6rem;
+
+		@include tablet {
+			margin-bottom: 30px;
+		}
+
+		@include desktop {
+			width: span(8);
+			margin-bottom: 0;
+		}
+
+		&Wrap {
+			@include desktop {
+				display: flex;
+				align-items: center;
+			}
+		}
+	}
+
+	&Descr {
+		@include desktop {
+			width: span(9);
+			padding-top: 1rem;
+		}
+	}
+}
+
+.headerBackground {
+	.circle {
+		top: 4rem;
+		left: span(3);
+		width: 150vw;
+
+		@include desktop {
+			top: 5rem;
+			left: calc(50vw + span(9) - span($columns-desktop) / 2 + var(--sbw) / 2);
+			width: span(30);
+		}
+	}
+}
+
+.largeTitleCta {
+	text-align: center;
+
+	h2 > * {
+		text-align: center !important;
+	}
+}

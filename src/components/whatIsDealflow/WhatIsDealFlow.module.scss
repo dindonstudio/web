@@ -1,0 +1,608 @@
+.whatIsDealFlow {
+
+  z-index: 1;
+  .container {
+    background-color: aliceblue;
+  }
+
+  .centeredContainer {
+    width: 100%;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .topImage {
+  
+    width: 75%;
+    top: -5rem;
+    position: relative;
+    @include desktop {
+      width: 50%;
+      top: -8rem;
+    }
+  }
+  
+  .circle {
+    background: radial-gradient(rgb(208, 206, 255) 30%, rgba(208, 206, 255, 0) 70%);    
+    top: 47%;
+    left: 68%;
+    width: 120rem;
+    margin-top: 0rem;
+  }
+  .circleBottom{
+    background: radial-gradient(rgb(251 251 251) 30%, rgb(255 255 255 / 0%) 70%);
+    top: -33%;
+    left: -31%;
+    width: 113rem;
+    margin-top: 0rem;
+  }
+  .title {
+    // line-height: normal;
+  }
+  .rightAligned {
+    // line-height: normal;
+    text-align: center;
+    padding-bottom: 3rem;
+    @include desktop {
+      width: span(12);
+      margin-right: span(5);
+      text-align: right;
+    }
+  }
+  .textWhatIs {
+    @include mobile {
+      padding: 0 span(1);
+      text-align: center;
+    }
+
+    @include desktop {
+      text-align: left;
+      width: span(8);
+      margin-left: span(1);
+    }
+  }
+  .whatIs {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: initial;
+    display: flex;
+    // line-height: normal;
+    flex-direction: column;
+    @include desktop {
+      flex-direction: row-reverse;
+    }
+  }
+  .logo.logo {
+    @include desktop {
+      margin: 12rem 0;
+      height: 60px;
+    }
+    margin: 4rem 0;
+    height: 30px;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+    display: flex;
+    justify-content: center;
+  }
+  .inLineLogo {
+    display: inline;
+  }
+  .container__text {
+    // line-height: normal;
+    @include mobile {
+      padding: 0 span(2);
+    }
+
+    @include desktop {
+      width: span(16);
+      margin-left: span(2);
+      padding: 0;
+    }
+  }
+  .customFont {
+    font-family: "generalsans", sans-serif;
+    line-height: normal;
+  }
+  .function {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    width: 100%;
+    @include desktop {
+      padding-top: 10rem;
+    }
+    .centerAligned {
+      text-align: center;
+      padding: 0 span(1) 3rem;
+      @include desktop {
+        text-align: left;
+        width: span(21);
+        margin-left: span(5);
+        // line-height: normal;
+        padding: 0 0 3rem;
+      }
+    }
+    .textWhyUse {
+      text-align: center;
+      padding: 0 span(1);
+      @include desktop {
+        text-align: left;
+        width: span(21);
+        margin-left: span(5);
+        padding: 0;
+      }
+    }
+  }
+  .functionKeep {
+    padding-top: 0rem;
+    padding-bottom: 10rem;
+    width: 100%;
+    .centerAligned {
+      padding: 0 span(1) 3rem;
+      text-align: center;
+      @include desktop {
+        width: span(21);
+        text-align: left;
+        margin-left: span(5);
+        // line-height: normal;
+        padding: 0 0 3rem;
+      }
+    }
+    .textWhyUse {
+      text-align: center;
+      padding: 0 span(1);
+      margin-left: 0;
+      @include desktop {
+        padding: 0;
+        text-align: left;
+        width: span(21);
+        margin-left: span(5);
+      }
+    }
+  }
+  .whyUse {
+    padding-bottom: 6rem;
+    width: 100%;
+    .centerAligned {
+      text-align: center;
+      padding: 0 span(1) 3rem;
+      @include desktop {
+        width: span(21);
+        margin-left: span(5);
+        text-align: left;
+        // line-height: normal;
+        padding: 0 0 3rem;
+      }
+    }
+    .textWhyUse {
+      text-align: center;
+      padding: 0 span(1);
+      @include desktop {
+        text-align: left;
+        width: span(21);
+        margin-left: span(5);
+        padding: 0;
+      }
+    }
+  }
+
+  .bestDeal {
+    display: flex;
+    padding-top: 6rem;
+    flex-direction: column;
+    @include desktop {
+      padding-top: 10rem;
+      display: flex;
+      flex-direction: row;
+    }
+    .bestDeal__container {
+      @include desktop {
+        display: flex;
+        flex-direction: column;
+
+        width: span(13);
+        margin-left: span(4);
+      }
+    }
+    .centerAligned {
+      text-align: center;
+      padding: 0 span(1) 3rem;
+      @include desktop {
+        width: span(21);
+
+        text-align: left;
+        // line-height: normal;
+        padding: 0 0 3rem;
+      }
+    }
+    .bestDeal__image {
+      width: span(7);
+      @include desktop {
+        width: span(7);
+        margin-right: span(4);
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .text {
+      text-align: center;
+      padding: 0 span(1) 3rem;
+      @include desktop {
+        text-align: left;
+        padding: 0;
+      }
+    }
+  }
+  .bestDeal__image {
+    height: auto;
+    width: 100%;
+  }
+
+  .complete {
+    padding-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include desktop {
+      padding-top: 16rem;
+      flex-direction: row-reverse;
+      align-items: center;
+    }
+    .complete__container {
+      @include desktop {
+        width: span(12);
+        margin-right: span(4);
+        text-align: right;
+        position: relative;
+      }
+      .logo__container {
+        position: relative;
+        padding-bottom: 3rem;
+        .centerAligned {
+          text-align: center;
+          padding: 1rem span(1) 0rem;
+          br {
+            display: none;
+          }
+          @include desktop {
+            br {
+              display: block;
+            }
+            font-size: 5rem;
+            text-align: right;
+            // line-height: normal;
+            padding: 0 0 0rem;
+          }
+        }
+      }
+      .inLineLogoSmall {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        svg {
+          width: 15rem;
+        }
+        @include desktop {
+          position: absolute;
+          width: 19rem;
+          right: 24rem;
+          top: -2rem;
+          svg {
+            width: 100%;
+          }
+        }
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .complete__feature {
+      width: 100%;
+      padding: 0 span(1);
+      margin-left: 0;
+      @include desktop {
+      width: span(10);
+      margin-left: span(2);
+      }
+      .complete__feature__container {
+        @include desktop {
+          padding: 4rem 1rem;
+          }
+        border-radius: 30px;
+        background: rgba(247, 246, 242, 0.3);
+        padding: 4rem 3rem;
+        display: flex;
+        flex-direction: column;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .feature {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      svg {
+        flex: 0 0 auto;
+        margin-right: 1.3rem;
+        display: block  !important;
+      }
+    }
+    .feature__title {
+      padding-bottom: 2rem;
+    }
+    .text {
+      text-align: center;
+      padding: 0 span(1) 3rem;
+      margin: 0;
+      @include desktop {
+        text-align: right;
+        padding-left: span(2);
+        width: 100%;
+     padding-right: 0;
+        margin: 0;
+      }
+    }
+  }
+
+  .bigSentence {
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 104%;
+      left: -1.6%;
+    }
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+justify-content: center;
+
+
+    position: relative;
+    max-width: inherit;
+    // background: #5750f1;
+    .bigSentence__container{
+opacity: 0;
+      display: flex;
+      gap: 2rem;
+      @include desktop {
+      gap: 5rem;
+      }
+      .bigSentence__text{
+        opacity: 1;
+      }
+    }
+
+  }
+  .bigSentence__text {
+    // flex-basis: calc(22% - 10px);
+    opacity: 0;
+    @include desktop {
+    font-size: 11vw;
+    margin-bottom: 10px;
+    }
+    font-size: 14vw;
+    margin-bottom: 1rem;
+  }
+  .inLineLogo {
+    opacity: 0;
+    @include desktop {
+      height: 100%;
+      width: 100%;
+    flex-basis: calc(28% - 10px);
+    margin-bottom: 10px;
+    }
+  height: 100%;
+  width: 40%;
+  margin-bottom: 2rem;
+    flex-basis: calc(8% - 10px);
+
+  }
+
+  .goodBye__container {
+    display: flex;
+    opacity: 0;
+    justify-content: center;
+    font-family: "generalsans", sans-serif;
+    flex-direction: column;
+    padding-top: 6rem;
+    // background: #5750f1;
+    @include desktop {
+      padding-top: 8rem; 
+    }
+  }
+  .button__container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 12rem;
+    padding-top: 2rem;
+  }
+  .goodBye__text {
+    font-family: "generalsans", sans-serif;
+ width: 100%;
+    margin-left: 0;
+    padding: 0 span(1);
+    text-align: center;
+    @include desktop {
+      padding: 0 span(3);
+      width: 100%;
+
+    }
+  }
+  .surtitle {
+    margin-bottom: 1rem;
+  }
+
+  .text {
+    @include mobile {
+    }
+
+    @include desktop {
+      width: span(10);
+      margin-right: span(2);
+    }
+
+    &.setWidth {
+      @include desktop {
+        width: span(8);
+      }
+    }
+  }
+
+  .cta {
+    margin-top: 3rem;
+    position: relative;
+    z-index: 20;
+  }
+
+  &.center {
+    text-align: center;
+
+    .text {
+      @include mobile {
+        // margin-left: span(1);
+        // margin-right: span(1);
+      }
+
+      @include desktop {
+        width: span(10);
+        margin-left: span(2);
+      }
+    }
+  }
+}
+.container {
+  position: relative;
+}
+
+.circleNav {
+  @include desktop {
+transform: translateX(-200%);
+opacity: 0;
+    width: span(1);
+    height: span(1);
+    bottom: 4rem;
+  }
+  position: fixed;
+  bottom: 2rem;
+  left: span(0.5);
+  z-index: 20;
+  width: span(1.5);
+  height: span(1.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(92, 221, 152, 1);
+  color: #F7F6F2;
+  flex-direction: column;
+
+  cursor: pointer;
+
+}
+
+.anchor__nav {
+  @include desktop {
+    width: span(6);
+left: span(1);
+bottom: 10rem;
+  }
+  display: none;
+  position: fixed;
+  bottom: 8rem;
+  z-index: 20;
+width: span(10);
+left: span(0.5);
+padding: 2rem 2rem ;
+color: #17403E;
+flex-direction: column;
+gap: 1rem;
+border-radius: 30px;
+background: #F7F6F2;
+}
+
+.hamburgerLine {
+  @include desktop {
+    margin-bottom: 0.3vw;
+    width: span(0.6);
+    top: span(0.05);
+  }
+  width: span(0.7);
+  position: relative;
+  top: 2px;
+  display: flex;
+  flex-direction: column;
+  height: 2px;
+  background-color: #fff;
+  margin-bottom: 1vw;
+  transition: transform 0.3s ease;
+}
+
+.crossIcon {
+  font-size: 3rem;
+  color: #fff;
+  position: relative;
+  bottom: 2px;
+}
+
+
+.anchor__nav.open {
+  display: flex;
+}
+.anchor__text:hover{
+  text-decoration: underline;
+  transition: .3s ease all;
+}
+.dealflowLogo {
+	@include desktop {
+		position: fixed;
+		z-index: 0;
+		top: 0;
+		left : span(1);
+    opacity: 0;
+		color: $purpleLight;
+	}
+
+	svg {
+		@include desktop {
+			width: 61rem !important;
+			height: 98.4rem !important;
+	
+		}
+	}
+}
+.dealflowLogoFill {
+	@include desktop {
+		position: fixed;
+    opacity: 0;
+		z-index: 0;
+		top: 0;
+		right: 0;
+		color: $purpleLight;
+	}
+
+	svg {
+		@include desktop {
+			width: 61rem !important;
+			height: 98.4rem !important;
+			opacity: 0.3;
+		}
+	}
+}
+
+.title {
+  padding-bottom: 2rem;
+}

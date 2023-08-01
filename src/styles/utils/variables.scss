@@ -1,0 +1,35 @@
+// styles
+$radius: 4px;
+
+// Grid
+$columns-mobile: 15;
+$columns-tablet: 15;
+$columns-desktop: 30;
+
+$gutter-mobile: 0;
+$gutter-tablet: 0;
+$gutter-desktop: 0;
+
+// Responsive
+$mobile-margin: 0px;
+$tablet-margin: 0px;
+$desktop-margin: 0px;
+$margin: 0px;
+$max-width: 1680px;
+
+$mobile-mockup-width: 375px;
+$tablet-mockup-width: 744px;
+$desktop-mockup-width: 1440px;
+$mockup-width: $mobile-mockup-width;
+
+$tablet: 744px;
+$desktop: 844px;
+$large-desktop: 1366px;
+$small-height: 800px;
+
+$header-height-mobile: 12.8rem;
+$header-height-desktop: 16rem;
+
+// Fonts
+$font-sans: 'generalsans', sans-serif;
+$font-serif: 'optima', 'Helvetica Neue', arial, sans-serif;

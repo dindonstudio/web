@@ -1,0 +1,94 @@
+.homePortfolio {
+	overflow: hidden;
+	margin-top: -10rem;
+	padding-top: 10rem;
+
+	@include desktop {
+		margin-top: 0;
+		padding-top: 20rem;
+	}
+}
+
+.phone {
+	width: span(11);
+	margin: 0 auto;
+
+	@include desktop {
+		width: span(9);
+	}
+}
+
+.background {
+	position: fixed;
+	z-index: -1;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	opacity: 0;
+	background: $pinkDark;
+
+	.circle {
+		position: absolute;
+		z-index: 1;
+		top: 50%;
+		left: 50%;
+		opacity: 0.9;
+		background: radial-gradient(rgba($pink, 1) 50%, rgba($pink, 0) 70%);
+		border-radius: 50%;
+		transform: translate(-25%, -50%);
+		filter: blur(20px);
+		//will-change: transform;
+
+		@include desktop {
+			width: span(30);
+		}
+
+		&::after {
+			content: '';
+			display: block;
+			padding-bottom: 100%;
+		}
+	}
+}
+
+.container {
+	padding: 0 span(1);
+	text-align: center;
+
+	@include desktop {
+		display: flex;
+		margin-top: 5rem;
+		padding: 0;
+		text-align: left;
+	}
+}
+
+.left {
+	margin-bottom: 4rem;
+
+	@include desktop {
+		width: span(10.5);
+		margin-bottom: 0;
+		margin-left: span(4);
+	}
+}
+
+.right {
+	@include desktop {
+		width: span(7.5);
+		margin-left: span(3);
+	}
+}
+
+.button {
+	margin-right: 1.5rem;
+}
+
+.title {
+	margin-bottom: 3rem;
+}
+
+.testament {
+	margin-top: 6.4rem;
+}

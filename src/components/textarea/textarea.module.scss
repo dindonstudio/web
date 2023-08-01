@@ -1,0 +1,130 @@
+.wrapper {
+	position: relative;
+}
+
+.label {
+	display: inline-block;
+	padding-bottom: 0.6rem;
+	padding-left: 2rem;
+
+	@include tablet {
+		padding-bottom: 6px;
+		padding-left: 20px;
+	}
+}
+
+.textarea {
+	appearance: none;
+	border: 1px solid rgba($black, 0.1);
+	resize: none;
+	width: 100%;
+	height: 24rem;
+	padding: 1.5rem 2rem;
+	font-family: $font-sans;
+	border-radius: 0.4rem;
+	line-height: 1.2;
+	color: currentColor;
+	background-color: $white;
+	transition: border-color 1s $expo-out;
+
+	@include tablet {
+		height: 240px;
+		border-radius: 4px;
+		padding: 15px 20px;
+	}
+
+	&:focus {
+		outline: none;
+		border-color: currentColor;
+	}
+
+	&::placeholder {
+		color: currentColor;
+	}
+
+	&:placeholder-shown:not(:focus) ~ .required {
+		opacity: 0.4;
+	}
+}
+
+.required {
+	position: absolute;
+	top: 1.5rem;
+	right: 2rem;
+	line-height: 1;
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 0.5s $expo-out;
+
+	@include tablet {
+		top: 15px;
+		right: 20px;
+	}
+}
+
+.regular {
+	.label {
+		font-size: clampfont(1.1rem);
+		line-height: 1;
+	}
+}
+
+.float {
+	.textarea {
+		&:placeholder-shown:not(:focus) ~ .label {
+			transform: scale3d(1, 1, 1) translate3d(0, 50%, 0);
+
+			&::before {
+				background-color: transparent;
+			}
+		}
+	}
+
+	&.hasLabel {
+		.textarea {
+			&::placeholder {
+				opacity: 0;
+			}
+		}
+	}
+
+	.label {
+		position: absolute;
+		top: -2.1rem;
+		left: 2rem;
+		height: 4.2rem;
+		display: inline-flex;
+		align-items: center;
+		line-height: 1;
+		padding: 0.4rem 0.8rem;
+		margin-left: -0.8rem;
+		pointer-events: none;
+		transform-origin: left center;
+		transition: transform 0.5s $expo-out;
+		transform: scale3d(0.8, 0.8, 0.8) translate3d(0.25em, 1px, 0);
+		//will-change: transform;
+		backface-visibility: hidden;
+
+		&::before {
+			content: '';
+			display: block;
+			z-index: -1;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 100%;
+			height: 1.5em;
+			margin-top: -0.75em;
+			background-color: $white;
+			transition: background 0.5s $expo-out;
+		}
+
+		@include tablet {
+			top: -25px;
+			left: 20px;
+			height: 50px;
+			padding: 4px 8px;
+			margin-left: -8px;
+		}
+	}
+}

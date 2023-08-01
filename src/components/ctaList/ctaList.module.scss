@@ -1,0 +1,41 @@
+.ctaList {
+	position: relative;
+	margin: 15rem 0;
+	padding: 0 span(1);
+	text-align: center;
+
+	@include desktop {
+		margin: 15rem 0;
+		padding: 0;
+	}
+}
+
+.title {
+	margin-bottom: 3rem;
+
+	@include desktop {
+		width: span(14);
+		margin: 0 auto 5.5rem;
+	}
+}
+
+.feature {
+	margin-bottom: 1.5rem;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.background {
+	.circle {
+		top: auto;
+
+		@include desktop {
+			top: 50%;
+			left: -35rem;
+			width: span(25);
+			margin-top: span(-16);
+		}
+	}
+}

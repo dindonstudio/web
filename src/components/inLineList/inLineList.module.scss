@@ -1,0 +1,43 @@
+.inLineList {
+	&Wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -1rem;
+		margin-bottom: -1.5rem;
+
+		& > * {
+			margin-left: 1rem;
+			margin-bottom: 1.5rem;
+		}
+
+		&.narrow {
+			margin-left: -0.5rem;
+			margin-bottom: -1rem;
+
+			& > * {
+				margin-left: 0.5rem;
+				margin-bottom: 1rem;
+			}
+		}
+
+		&.mobileFullWidth {
+			@include mobile {
+				& > * {
+					flex: 1;
+				}
+			}
+		}
+		
+		&.mobileCentered {
+			@include mobile {
+				justify-content: center;
+			}
+		}
+		
+		&.desktopCentered {
+			@include desktop {
+				justify-content: center;
+			}
+		}
+	}
+}

@@ -1,0 +1,106 @@
+.integration {
+	align-items: center;
+	padding: 11rem span(1) 6rem;
+	background: $pinkDark;
+	text-align: center;
+
+	@include desktop {
+		display: flex;
+		min-height: 100vh;
+		padding: span(1) 0 span(2) span(3);
+		text-align: left;
+	}
+}
+
+.backCta {
+	position: absolute;
+	top: 13rem;
+	left: span(1);
+
+	@include desktop {
+		left: span(1);
+	}
+
+	svg {
+		transform: scaleX(-1);
+	}
+}
+
+.title {
+	padding-top: 12rem;
+
+	@include desktop {
+		width: span(10);
+		margin-top: 0;
+	}
+}
+
+.largeDescription {
+	margin-top: 3rem;
+
+	@include desktop {
+		width: span(14.5);
+		margin-top: 5.5rem;
+	}
+}
+
+.smallDescription {
+	margin-top: 3rem;
+
+	@include desktop {
+		width: span(9);
+		margin-top: 5.5rem;
+	}
+}
+
+.card {
+	margin-top: 6rem;
+
+	@include desktop {
+		margin-top: 0;
+		margin-left: span(2.5);
+	}
+}
+
+.background {
+	@include desktop {
+		position: fixed !important;
+	}
+
+	.circle {
+		top: 4rem;
+		left: 30%;
+		width: 60rem;
+		opacity: 0.9;
+
+		@include desktop {
+			top: -40rem;
+			right: -40rem;
+			width: 160rem;
+			margin-left: -30rem;
+		}
+	}
+}
+
+.dealflow {
+	opacity: 0.6;
+
+	@include desktop {
+		position: fixed;
+		z-index: -1;
+		top: 50%;
+		left: 0%;
+		// margin-left: span(-1);
+		transform: translate(0, -50%);
+	}
+
+	&Logo {
+		height: auto;
+		opacity: 0.2;
+		color: $white;
+
+		@include desktop {
+			width: span(15);
+		}
+	}
+}

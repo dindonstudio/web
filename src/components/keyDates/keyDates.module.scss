@@ -1,0 +1,135 @@
+.keyDates {
+	overflow: hidden;
+	color: $white;
+
+	.container {
+		position: relative;
+		padding: 9rem 0 25vh;
+
+		@include desktop {
+			padding: 14rem 0;
+		}
+	}
+
+	@include touch {
+		position: relative;
+	}
+}
+
+.title {
+	margin-bottom: 3rem;
+	text-align: center;
+
+	@include desktop {
+		margin-bottom: 8rem;
+		padding-bottom: 3rem;
+	}
+}
+
+.date {
+	display: flex;
+	position: relative;
+	height: 50vh;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+
+	@include desktop {
+		height: 50vh;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	&Year {
+		position: relative;
+		//will-change: opacity;
+
+		@include mobile {
+			font-size: clampfont(20rem);
+		}
+
+		@include desktop {
+			left: calc(-50vw + span($columns-desktop) / 2 - span(1.5) + var(--sbw) / 2);
+			width: span(16);
+			flex: 0 0 auto;
+		}
+	}
+
+	&Descr {
+		margin: 1rem span(2) 0;
+
+		@include mobile {
+			text-align: center;
+		}
+
+		@include tablet {
+			margin-top: 30px;
+		}
+
+		@include desktop {
+			width: span(10);
+			margin: 0 span(2) 0 0;
+		}
+	}
+}
+
+.background {
+	@include desktop {
+		&:nth-child(4n + 2) .circle {
+			top: 50%;
+			right: calc(-50vw + span($columns-desktop) / 2 + var(--sbw) / 2) !important;
+			left: auto;
+			transform: translate(0, -50%);
+		}
+
+		&:nth-child(4n + 3) .circle {
+			top: auto;
+			bottom: 20%;
+		}
+
+		&:nth-child(4n + 4) .circle {
+			top: 50%;
+			left: calc(-50vw + span($columns-desktop) / 2 + var(--sbw) / 2) !important;
+			transform: translate(0, -50%);
+		}
+	}
+
+	.circle {
+		top: 9rem;
+		left: 50%;
+		width: 74rem;
+		transform: translate(-50%, 0);
+		filter: blur(80px);
+
+		@include tablet {
+			top: 90px;
+			width: 150%;
+		}
+
+		@include desktop {
+			top: 20%;
+			left: 50%;
+			width: span(24);
+			opacity: 0.5;
+			transform: translate(-50%, 0);
+			filter: blur(80px);
+		}
+	}
+
+	&Wrap {
+		z-index: -1;
+		opacity: 0;
+
+		@include desktop {
+			position: relative;
+		}
+
+		@include touch {
+			position: fixed;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+	}
+}

@@ -1,0 +1,222 @@
+.aboutMission {
+	text-align: center;
+
+	@include desktop {
+		text-align: left;
+	}
+
+	.marqueeTitle {
+		--color-light: #{$white};
+
+		height: 1em;
+		white-space: nowrap;
+
+		@include mobile {
+			font-size: clampfont(11rem);
+		}
+	}
+
+	.dealflowStroke {
+		position: absolute;
+		z-index: -1;
+		top: -12rem;
+		left: 50%;
+		width: 47.2rem;
+		margin-left: -23.6rem;
+		pointer-events: none;
+		//will-change: opacity;
+
+		@include desktop {
+			top: 0;
+			right: span(2.5);
+			left: auto;
+			width: span(12);
+			margin: 0;
+		}
+
+		.logo {
+			width: 100%;
+			height: auto;
+		}
+
+		path {
+			stroke: $white;
+		}
+
+		@include no-touch {
+			position: fixed;
+			opacity: 0;
+		}
+	}
+}
+
+.diptych {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 6rem;
+	padding-top: 6rem;
+
+	@include mobile {
+		justify-content: center;
+	}
+
+	@include tablet {
+		padding-top: 60px;
+	}
+
+	@include desktop {
+		align-items: center;
+		margin-bottom: 18rem;
+		padding-top: 12rem;
+	}
+
+	&Text {
+		margin: 0 span(1);
+
+		@include desktop {
+			width: span(8);
+			margin: 0;
+			margin-left: span(4);
+		}
+	}
+
+	&Descr {
+		margin-top: 2.6rem;
+
+		@include mobile {
+			margin-right: span(1);
+			margin-left: span(1);
+		}
+	}
+
+	&Image {
+		width: span(11);
+
+		@include tablet {
+			width: span(10);
+		}
+
+		@include desktop {
+			width: span(12);
+		}
+
+		&Wrap {
+			position: relative;
+			width: 100%;
+			flex: 0 0 auto;
+			margin-bottom: 6rem;
+
+			@include mobile {
+				order: -1;
+			}
+
+			@include tablet {
+				margin-bottom: 80px;
+			}
+
+			@include desktop {
+				width: span(19);
+				margin-bottom: 10rem;
+				margin-left: span(-1);
+			}
+		}
+	}
+
+	.circle {
+		@include desktop {
+			top: auto;
+			bottom: -10rem;
+			left: 50%;
+			width: span(16);
+			margin-left: span(-8);
+		}
+	}
+
+	@include no-touch {
+		height: 100vh;
+		margin: 0;
+		padding: 0;
+	}
+
+	@media (min-aspect-ratio: 1440 / 740) {
+		@include no-touch {
+			height: auto;
+			min-height: 100vh;
+			padding-bottom: 12rem;
+		}
+	}
+}
+
+.outro {
+	position: relative;
+	padding-bottom: 11rem;
+
+	@include tablet {
+		padding-bottom: 140px;
+	}
+
+	@include desktop {
+		display: flex;
+		align-items: center;
+		padding-bottom: 0;
+	}
+
+	.illu {
+		width: 100%;
+		margin: -5rem 0 -2rem;
+
+		@include tablet {
+			width: 540px;
+			margin: -30px auto;
+		}
+
+		@include desktop {
+			width: span(14);
+			margin: 0 0 0 span(-1.5);
+		}
+	}
+
+	.dealflowLogo {
+		width: 2.3rem;
+		height: auto;
+		margin-bottom: 0.8rem;
+
+		@include tablet {
+			width: 24px;
+			margin-bottom: 8px;
+		}
+	}
+
+	.excerpt {
+		font-size: clampfont(2.8rem);
+		line-height: 1.5;
+
+		@include mobile {
+			margin: 0 span(1.5);
+		}
+
+		@include desktop {
+			width: span(8.5);
+			margin-left: span(4.5);
+		}
+	}
+
+	.circle {
+		top: -25%;
+		right: -10%;
+		left: auto;
+		width: 80rem;
+
+		@include tablet {
+			top: -50%;
+			width: 1200px;
+		}
+
+		@include desktop {
+			top: -50%;
+			right: auto;
+			left: span(-6);
+			width: span(30);
+		}
+	}
+}

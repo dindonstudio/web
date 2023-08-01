@@ -1,0 +1,68 @@
+.companyPartners {
+	--color-light: #{$white};
+
+	background: $white;
+
+	.container {
+		padding: 9rem 0 11.5rem;
+
+		@include desktop {
+			padding: 16rem 0 18rem;
+		}
+	}
+
+	.header {
+		margin: 0 span(2);
+		text-align: center;
+
+		@include desktop {
+			margin: 0 span(6);
+		}
+	}
+
+	.logo {
+		height: 3.8rem;
+		margin-bottom: 2rem;
+		color: $purple;
+
+		@include tablet {
+			height: 44px;
+			margin-bottom: 20px;
+		}
+	}
+
+	.references {
+		height: 6.5rem;
+		margin-top: 12rem;
+
+		@include tablet {
+			height: 90px;
+			margin-top: 160px;
+		}
+
+		@include desktop {
+			height: 9rem;
+			margin-top: 16rem;
+		}
+	}
+
+	.reference {
+		margin-right: 12rem;
+
+		@include desktop {
+			margin-right: 15.8rem;
+		}
+
+		img {
+			max-width: 22rem;
+
+			@include tablet {
+				max-width: 300px;
+			}
+
+			@include desktop {
+				max-width: 32rem;
+			}
+		}
+	}
+}

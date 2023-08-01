@@ -1,0 +1,94 @@
+.featureFooter {
+	position: relative;
+	padding: 5rem 0 6rem;
+
+	@include desktop {
+		padding: 18rem 0;
+	}
+}
+
+.text {
+	margin: 0 span(1);
+	text-align: center;
+
+	@include desktop {
+		width: span(15);
+		margin: 0 auto;
+	}
+
+	.title {
+		@include mobile {
+			margin: 0 span(0.5);
+		}
+	}
+
+	.cta {
+		margin-top: 3rem;
+
+		@include desktop {
+			margin-top: 2rem;
+		}
+	}
+}
+
+.features {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 6rem span(1) 0;
+	opacity: 0;
+	background-color: $white;
+	border-radius: 2rem;
+	color: $greenDark;
+	transform: translateY(5rem) scale(0.85);
+
+	@include desktop {
+		margin: 8rem span(4) 0;
+	}
+}
+
+.feature {
+	flex: 1;
+	padding: 4.5rem span(2);
+	text-align: center;
+
+	@include mobile {
+		border-top: 1px solid rgba($black, 0.1);
+
+		&:first-child {
+			border-top: 0;
+		}
+	}
+
+	@include desktop {
+		max-width: span(13);
+		margin: 0 auto;
+		padding: 9rem span(2);
+	}
+
+	&Icon {
+		width: 6.4rem;
+		margin: 0 auto 3rem;
+	}
+
+	&Description,
+	&Cta {
+		margin-top: 3rem;
+	}
+}
+
+.background {
+	.circle {
+		top: auto;
+		bottom: -20rem;
+		left: -20rem;
+		width: 66rem;
+
+		@include desktop {
+			top: 8rem;
+			left: calc(50% + span(1));
+			width: span(28);
+			margin-left: span(-14);
+		}
+	}
+}

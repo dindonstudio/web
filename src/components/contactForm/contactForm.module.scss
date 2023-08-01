@@ -1,0 +1,108 @@
+.contactForm {
+
+}
+
+.line {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+
+	@include mobile {
+		flex-wrap: wrap;
+	}
+
+	.input {
+		width: 100%;
+
+		@include desktop {
+			width: 50%;
+
+			&:first-child {
+				margin-right: 2rem;
+			}
+		}
+	}
+}
+
+.input {
+	margin-bottom: 2rem;
+
+	@include tablet {
+		margin-bottom: 20px;
+	}
+}
+
+.button {
+	&Wrapper {
+		margin-top: 2rem;
+
+		@include tablet {
+			margin-top: 20px;
+		}
+
+		@include desktop {
+			margin-top: 3rem;
+		}
+	}
+
+	&Submit {
+		position: relative;
+		width: 100%;
+
+		.message {
+			display: flex;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			align-items: center;
+			justify-content: center;
+			transform: translateY(100%);
+			transition: transform 0.8s $quart-inout;
+			white-space: nowrap;
+		}
+
+		.defaultLabel {
+			visibility: hidden;
+		}
+
+		.label {
+			transform: none;
+		}
+
+		&.isSuccess {
+			.label {
+				transform: translate3d(0, -100%, 0);
+				transition-timing-function: $expo-out;
+			}
+
+			.success {
+				transform: none;
+				transition-timing-function: $expo-out;
+			}
+		}
+
+		&.isError {
+			.label {
+				transform: translate3d(0, -100%, 0);
+				transition-timing-function: $expo-out;
+			}
+
+			.error {
+				transform: none;
+				transition-timing-function: $expo-out;
+			}
+		}
+	}
+}
+
+.disclaimer {
+	margin-top: 1rem;
+	padding: 0 span(1);
+	text-align: center;
+
+	@include desktop {
+		padding: 0 span(1);
+	}
+}

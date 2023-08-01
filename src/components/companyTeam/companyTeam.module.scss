@@ -1,0 +1,221 @@
+.companyTeam {
+	.container {
+		display: flex;
+		position: relative;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.diptych {
+		display: flex;
+		flex-wrap: wrap;
+		padding-top: 6rem;
+
+		@include mobile {
+			justify-content: center;
+		}
+
+		@include desktop {
+			align-items: center;
+			margin: 0 span(2);
+			padding-top: 10rem;
+		}
+
+		&Text {
+			margin: 0 span(1.5);
+			text-align: center;
+
+			@include desktop {
+				width: span(9);
+				margin: 0;
+				margin-left: span(2);
+				text-align: left;
+			}
+		}
+
+		&Image {
+			width: span(12);
+
+			@include tablet {
+				width: span(8);
+			}
+
+			@include desktop {
+				width: span(9);
+			}
+
+			&Wrap {
+				display: flex;
+				position: relative;
+				width: 134%;
+				flex: 0 0 auto;
+				justify-content: center;
+				margin-top: 4rem;
+
+				@include tablet {
+					width: span(12);
+					margin-top: 80px;
+				}
+
+				@include desktop {
+					width: span(14);
+					margin-top: 0;
+					margin-left: span(1);
+				}
+
+				> div {
+					width: 100%;
+				}
+			}
+
+			&Clip {
+				flex: 0 0 auto;
+			}
+		}
+
+		.circle {
+			top: 60%;
+			left: 50%;
+			width: 105%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	.paragraph {
+		margin: 0 span(1);
+		text-align: center;
+
+		@include desktop {
+			margin: 0 span(4);
+		}
+
+		.dealflowLogo {
+			height: 3.8rem;
+			margin-bottom: 2rem;
+			color: $purpleLight;
+
+			@include tablet {
+				height: 44px;
+				margin-bottom: 20px;
+			}
+		}
+
+		&.text2 {
+			.dealflowLogo {
+				color: $yellow;
+			}
+		}
+	}
+
+	.text1 {
+		padding-top: 12rem;
+
+		@include tablet {
+			padding-top: 120px;
+		}
+
+		@include desktop {
+			padding-top: 24rem;
+		}
+	}
+
+	.text2 {
+		padding-bottom: 9rem;
+
+		@include desktop {
+			padding-bottom: 16.5rem;
+		}
+	}
+
+	.title {
+		color: $white;
+
+		&Wrap {
+			position: absolute;
+			top: 12.4rem;
+
+			@include tablet {
+				top: 170px;
+			}
+
+			@include desktop {
+				top: 22rem;
+			}
+		}
+
+		> div {
+			display: flex;
+			overflow: hidden;
+		}
+
+		span {
+			display: block;
+		}
+	}
+
+	.portrait {
+		display: flex;
+		position: relative;
+		width: 100%;
+		align-items: center;
+		flex-direction: column;
+		margin-top: -5rem;
+		padding-bottom: 12rem;
+
+		@include tablet {
+			margin-top: -40px;
+			padding-bottom: 180px;
+		}
+
+		@include desktop {
+			padding-bottom: 18rem;
+		}
+
+		&Wrap {
+			width: 100%;
+		}
+
+		&Clip {
+			width: 185%;
+
+			@include tablet {
+				width: 140%;
+			}
+
+			@include desktop {
+				width: 110%;
+			}
+		}
+
+		&Image {
+			width: span(15);
+
+			@include mobile {
+				right: 2rem;
+			}
+
+			@include tablet {
+				width: span(12);
+			}
+
+			@include desktop {
+				width: span(18.5);
+			}
+		}
+
+		.circle {
+			top: auto;
+			bottom: 6rem;
+			left: 50%;
+			width: 100%;
+			margin-left: -50%;
+
+			@include desktop {
+				bottom: 8rem;
+				left: span(8);
+				width: span(17);
+				margin-left: 0;
+			}
+		}
+	}
+}

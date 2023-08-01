@@ -1,0 +1,88 @@
+.companyHeader {
+	position: relative;
+	min-height: 100vh;
+	color: $white;
+	text-align: center;
+
+	.container {
+		display: flex;
+		position: relative;
+		align-items: center;
+		flex-direction: column;
+		padding-top: 5rem;
+		padding-bottom: 6.4rem;
+
+		@include desktop {
+			padding-top: 9.4rem;
+			padding-bottom: 12rem;
+		}
+	}
+
+	.title {
+		position: absolute;
+		top: 8.2rem;
+		right: 0;
+		left: 0;
+		margin-top: 5rem;
+
+		@include desktop {
+			top: 9.4rem;
+			margin: 9rem span(2) 0;
+		}
+
+		span {
+			display: block;
+		}
+	}
+
+	.image {
+		left: 8%;
+		width: span(13);
+
+		@include tablet {
+			width: span(11.5);
+		}
+
+		@include desktop {
+			left: 5%;
+			width: span(15.5);
+		}
+
+		&Clip {
+			width: 195%;
+
+			@include mobile {
+				left: -2rem;
+			}
+
+			@include tablet {
+				width: 160%;
+			}
+
+			@include desktop {
+				width: 110%;
+			}
+		}
+	}
+
+	.circle {
+		top: auto;
+		bottom: 1rem;
+		left: 50%;
+		width: 54rem;
+		margin-left: -27rem;
+
+		@include tablet {
+			bottom: -90px;
+			opacity: 0.5;
+		}
+
+		@include desktop {
+			top: 0;
+			bottom: auto;
+			width: 110%;
+			margin-left: -55%;
+			opacity: 0.5;
+		}
+	}
+}

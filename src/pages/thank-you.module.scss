@@ -1,0 +1,55 @@
+.thankYou {
+	background: linear-gradient(45deg, $purple, $purpleLight);
+	color: $greenDark;
+}
+
+.container {
+	padding-top: 13rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	@include desktop {
+		padding-top: 15.5rem;
+	}
+}
+
+.header {
+	background: white;
+	border-radius: 0.5rem;
+	border: 0;
+	margin: 0 span(1) 6rem;
+	padding: 1.7rem;
+	box-shadow: 0 12px 24px 0 rgba(35, 42, 94, 0.6);
+	
+	@include mobile {
+		text-align: center;
+	}
+	
+	@include desktop {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin: 0 span(4) 8rem;
+	}
+
+	&Descr {
+		margin: 2.6rem span(1);
+		font-size: 3rem;
+
+		@include desktop {
+			width: span(8);
+			margin: 0 span(1) 0 0;
+		}
+
+		svg {
+			display: block;
+			color: $green;
+		}
+	}
+
+	.dealflowLogo {
+		margin-bottom: 0;
+	}
+}
+

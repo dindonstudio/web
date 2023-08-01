@@ -1,0 +1,67 @@
+.dealflow {
+	background: $purple;
+	color: $white;
+}
+
+.main {
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+
+.dealflowLogo {
+	@include desktop {
+		position: fixed;
+		z-index: 0;
+		top: 0;
+		left : 0;
+		color: $purpleLight;
+	}
+
+	svg {
+		@include desktop {
+			width: 61rem !important;
+			height: 98.4rem !important;
+			opacity: 0.3;
+		}
+	}
+}
+.dealflowLogoFill {
+	@include desktop {
+		position: fixed;
+		z-index: 0;
+		top: 0;
+		right: 0;
+		color: $purpleLight;
+	}
+
+	svg {
+		@include desktop {
+			width: 61rem !important;
+			height: 98.4rem !important;
+			opacity: 0.3;
+		}
+	}
+}
+
+.dealsCircle {
+	@include desktop {
+		left: -50rem;
+		// width: 130rem;
+	}
+}
+
+.largeTitleCta,
+.footer {
+	position: relative;
+	z-index: 1;
+}
+
+.workflowImage {
+	width: span(14) !important;
+
+	@include desktop {
+		width: span(13.5) !important;
+		margin-left: span(-3) !important;
+	}
+}

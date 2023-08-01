@@ -1,0 +1,91 @@
+.homePortal {
+	padding-bottom: 7rem;
+
+	@include desktop {
+		padding-bottom: 14rem;
+	}
+}
+
+.textWrapper {
+	display: flex;
+	height: 60vh;
+	overflow: hidden;
+	align-items: center;
+	justify-content: center;
+	//will-change: transform;
+
+	@include desktop {
+		height: 120vh;
+	}
+
+	div {
+		transform-origin: 50% 420rem;
+		//will-change: transform;
+
+		@include desktop {
+			transform-origin: 50% 720rem;
+		}
+	}
+
+	.text {
+		width: 110rem;
+		height: 10.7rem;
+
+		@include desktop {
+			width: 232rem;
+			height: 20.7rem;
+		}
+	}
+}
+
+.container {
+	display: flex;
+	padding: 0 span(1);
+	text-align: center;
+
+	@include desktop {
+		padding: 0;
+		text-align: left;
+	}
+}
+
+.image {
+	box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.1);
+
+	@include desktop {
+		width: span(15);
+		margin-top: 5rem;
+		margin-left: span(1);
+	}
+
+	& > span {
+		z-index: 0;
+		border-radius: 0.5rem;
+	}
+}
+
+.content {
+	@include desktop {
+		width: span(9.5);
+		margin-left: span(2.5);
+	}
+}
+
+.title,
+.excerpt {
+	margin-bottom: 3rem;
+}
+
+.button {
+	margin-right: 1.5rem;
+}
+
+.testament {
+	width: 100%;
+	margin-top: 6rem;
+}
+
+.background {
+	position: fixed;
+	z-index: -1;
+}

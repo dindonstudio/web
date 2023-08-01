@@ -1,0 +1,431 @@
+.collaborativeTool {
+	position: relative;
+	text-align: center;
+
+	@include desktop {
+		text-align: left;
+	}
+}
+
+.header {
+	position: relative;
+	padding: 14rem 3rem 5rem;
+
+	@include desktop {
+		padding: 20rem span(4) 5rem;
+	}
+
+	.headerBackground {
+		position: absolute !important;
+
+		.circle {
+			top: 30rem;
+			left: 10vw;
+			width: 80vw;
+
+			@include desktop {
+				top: 20rem;
+				left: 20%;
+				width: span(20);
+			}
+		}
+	}
+
+	.pageTitle {
+		font-size: clampfont(4rem);
+		line-height: 5rem;
+		text-align: center;
+
+		@include desktop {
+			font-size: clampfont(8rem);
+			line-height: 12rem;
+		}
+	}
+
+	.pageSubtitle {
+		margin-top: 1.5rem;
+		font-size: 2rem;
+		text-align: center;
+
+		@include desktop {
+			margin-top: 3rem;
+			font-size: 4.5rem;
+		}
+	}
+
+	.logo {
+		width: 1.3rem;
+		margin: 35px auto;
+
+		@include tablet {
+			width: 2.5rem;
+		}
+
+		@include desktop {
+			margin: 15rem auto;
+			width: 3.5rem;
+		}
+	}
+
+	.faceWrapper {
+		position: relative;
+		z-index: 1;
+	}
+
+  	.face {
+		width: 10rem;
+		margin: 6rem auto;
+
+		@include tablet {
+			width: 20rem;
+		}
+
+		@include desktop {
+			width: 35rem;
+		}
+	}
+
+	.greatnessWrapper {
+		position: absolute;
+		top: 0;
+		left: -50%;
+		z-index: -1;
+
+		@include desktop {
+			left: -100%;
+		}
+
+		div {
+			transform-origin: 50% 325%;
+
+			@include desktop {
+				transform-origin: 50% 250%;
+			}
+		}
+
+		.greatness {
+			width: 75rem;
+
+			@include tablet {
+				width: 150rem;
+			}
+
+			@include desktop {
+				width: 350rem;
+			}
+		}
+	}
+
+	.transparencyWrapper {
+		@include desktop {
+			margin: 18rem 0 8rem;
+			display: flex;
+			align-items: flex-start;
+		}
+	}
+
+	.transparencyInner {
+		@include desktop {
+			flex: 1 0 50%;
+			padding: 0 10rem;
+		}
+	}
+
+	.transparency {
+		margin-bottom: 2rem;
+
+		@media (min-width: $tablet-mockup-width)  {
+			margin: 0 auto;
+			font-size: 3rem;
+			line-height: 3.5rem;
+		}
+
+		@include desktop {
+			margin-bottom: 2rem;
+		}
+	}
+
+	.transparencyText {
+		margin-bottom: 30px;
+	}
+
+	.example {
+		flex: 1 0 50%;
+		position: relative;
+		top: 3rem;
+		margin: 3rem auto 6rem;
+
+		@include desktop {
+			margin: 0;
+			position: relative;
+			left: 5rem;
+			width: 100rem;
+		}
+	}
+
+	.streamline {
+		@include desktop {
+			display: flex;
+			flex-direction: column-reverse;
+			margin: 0 auto;
+			padding: 0 25rem;
+			text-align: center;
+		}
+	}
+}
+
+.sectionTitle {
+	font-size: 2rem;
+	line-height: 2.5rem;
+	flex: 1 0 40%;
+
+	@media (min-width: $tablet-mockup-width)  {
+		font-size: 4rem;
+		line-height: 4.5rem;
+	}
+}
+
+.sectionText {
+	font-size: 1.5rem;
+	flex: 1 0 40%;
+
+	@media (min-width: $tablet-mockup-width)  {
+		font-size: 2rem;
+	}
+}
+
+.splitSection {
+	@include desktop {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 3rem;
+	}
+}
+
+.design {
+	position: relative;
+	padding: 8rem 4rem 4rem;
+	background-color: $greenDark;
+	color: white;
+	z-index: 1;
+
+	@include desktop {
+		padding: 8rem 12rem;
+		display: flex;
+		justify-content: space-between;
+		gap: 5%;
+	}
+
+	.chartWrapper {
+		order: 2;
+		flex: 1 0 55%;
+	}
+
+	.designTitle {
+		margin: 3rem 0;
+	}
+
+	.designText {
+		margin-bottom: 32px;
+	}
+}
+
+.growth {
+	position: relative;
+	padding: 4rem 0;
+	background: linear-gradient(90deg, #CDC3CF 0%, #D4C4C4 31%, #E1C7B2 100%);
+	z-index: 1;
+
+	@include desktop {
+		display: flex;
+		flex-direction: column-reverse;
+		gap: 10rem;
+		padding: 10rem 0 4rem;
+	}
+
+	.screenshots {
+		margin-bottom: 50px;
+		height: 12rem;
+
+		@include desktop {
+			height: 40rem;
+		}
+	}
+
+	.screenshot {
+		margin-right: 2rem !important;
+	}
+
+	.growthSection {
+		padding: 0 5rem;
+
+		@include desktop {
+			padding: 0 15rem;
+		}
+	}
+
+	.growthTitle {
+		padding: 0 4rem;
+	}
+}
+
+.cards {
+	position: relative;
+	padding-bottom: 4rem;
+	z-index: -2;
+	background-color: #D1DED3;
+
+	@include tablet {
+		text-align: center;
+	}
+
+	.cardsIllustration {
+		position: absolute;
+		width: 100%;
+		top: 2rem;
+	}
+
+	.cardsContainer {
+		padding: 5rem span(1);
+
+		@include desktop {
+			padding: 30rem span(1) 20rem;
+		}
+	}
+
+	.card {
+		position: relative;
+		width: span(13);
+		margin-right: span(1);
+		position: relative;
+		text-align: center;
+		padding: 34px 6px 7px;
+		background: #F7F6F2;
+		opacity: 0.9;
+		box-shadow: 7px 7px 16px rgba(0, 0, 0, 0.25);
+		border-radius: 10px;
+
+		@include desktop {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			gap: 1rem;
+			width: span(9);
+			margin-right: span(0.5);
+			padding: 8rem 3rem 1rem;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	.cardPhoto {
+		position: absolute;
+		top: -26px;
+		left: calc(50% - 26px);
+		width: 52px;
+		height: 52px;
+
+		@include desktop {
+			top: -5rem;
+			left: calc(50% - 5rem);
+			margin-bottom: 2rem;
+			width: 10rem;
+			height: 10rem;
+		}
+	}
+
+	.cardText {
+		margin-bottom: 5px;
+		font-size: 1.4rem;
+
+		@include desktop {
+			font-size: 1.8rem;
+		}
+	}
+
+	.cardName {
+		font-size: 1.1rem;
+
+		@include desktop {
+			font-size: 1.8rem;
+		}
+	}
+
+	.cardCompany {
+		font-size: 1.1rem;
+		text-transform: uppercase;
+
+		@include desktop {
+			font-size: 1.8rem;
+		}
+	}
+
+	.bigText {
+		position: relative;
+		margin: 30px 0;
+		font-size: clampfont(6rem);
+
+		@include desktop {
+			font-size: 15vw;
+		}
+	}
+
+	.finishWrapper {
+		position: relative;
+
+		@include desktop {
+			position: absolute;
+			width: 25vw;
+			bottom: 23vw;
+			right: 5vw;
+		}
+	}
+
+	.finish {
+		font-size: 1.4rem;
+		margin-bottom: 25px;
+		padding: 0 4rem;
+
+		@include desktop {
+			padding: 0;
+			font-size: 1.7rem;
+		}
+	}
+
+	.cardsBackground {
+		position: absolute !important;
+		background-color: transparent !important;
+
+		.circle {
+			left: span(6);
+			top: 60%;
+			width: 60vw;
+			height: 60vw;
+
+			@include desktop {
+				left: 45%;
+				top: 40%;
+				width: span(15);
+				height: span(15);
+			}
+		}
+	}
+}
+
+.divider {
+	margin: 20px auto;
+	width: 25px;
+	height: 1px;
+	background-color: $greenDark;
+	border: none;
+	flex: 1 0 5%;
+
+	&Vertical {
+		width: 1px;
+		height: 6rem;
+		flex-basis: 6rem;
+	}
+}

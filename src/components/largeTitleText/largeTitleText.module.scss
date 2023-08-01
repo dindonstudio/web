@@ -1,0 +1,145 @@
+.largeTitleText {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  .gradient {
+    @include desktop {
+      position: relative;
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
+      z-index: -1; /* Ensure the gradient is behind other elements */
+    }
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    svg {
+      height: 100%;
+    }
+  }
+
+  .gadrientMobile {
+  }
+  .container {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    position: relative;
+    z-index: 2;
+    left: 0;
+  
+    display: flex;
+    align-items: center;
+    color: $greenDark;
+    background-color: initial;
+    display: flex;
+    flex-direction: column;
+    @include desktop {
+      height: 100vh;
+      min-height: 100vh;
+      flex-direction: row;
+    }
+    .largeTextTitle {
+      text-transform: uppercase;
+      text-align: center;
+
+      @include desktop {
+        text-align: left;
+        text-transform: initial;
+      }
+    }
+  }
+  .container__text {
+    line-height: normal;
+    @include mobile {
+      padding: 0 span(1);
+      padding-top: 6rem;
+    }
+
+    @include desktop {
+      width: span(16);
+
+      margin-left: span(2);
+    }
+  }
+  .customFont {
+    font-family: "generalsans", sans-serif;
+    line-height: normal;
+    padding-top: 1rem;
+    text-align: center;
+
+    @include desktop {
+      padding-top: 2rem;
+      text-align: left;
+      text-transform: initial;
+    }
+  }
+  .logoMobile {
+    width: 30px;
+    margin: 4rem 0;
+    height: 30px;
+    svg {
+      width: 100%;
+      height: 100%;
+      path {
+        fill: #17403e;
+      }
+    }
+  }
+  // @include mobile {
+  // 	margin-bottom: span(1);
+  // }
+
+  // @include desktop {
+  // 	margin-bottom: span(1);
+  // }
+
+  .surtitle {
+    margin-bottom: 1rem;
+  }
+
+  .title {
+    margin-top: 1rem;
+  }
+
+  .text {
+    margin-top: 1.5rem;
+
+    @include mobile {
+      padding: 0 span(1) 8rem;
+      text-align: center;
+    }
+
+    @include desktop {
+      width: span(9.5);
+      margin-right: span(3);
+    }
+
+    &.setWidth {
+      @include desktop {
+        width: span(8);
+      }
+    }
+  }
+
+  .cta {
+    margin-top: 3rem;
+    position: relative;
+    z-index: 20;
+  }
+
+  &.center {
+    text-align: center;
+
+    .text {
+      @include mobile {
+        // margin-left: span(1);
+        // margin-right: span(1);
+      }
+
+      @include desktop {
+        width: span(10);
+        margin-left: span(2);
+      }
+    }
+  }
+}

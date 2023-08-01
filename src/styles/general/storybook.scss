@@ -1,0 +1,17 @@
+:global {
+	@import 'styles/general/reset.scss';
+	@import 'styles/general/grid.scss';
+	@import 'styles/general/fonts.scss';
+	@import 'styles/general/base.scss';
+	@import 'styles/general/media.scss';
+	@import 'styles/general/links.scss';
+	@import 'styles/general/text.scss';
+}
+
+.storybook {
+	// margin: 4rem 0 0 span(1);
+
+	// @include desktop {
+	// 	margin: 5rem 0 0 span(1);
+	// }
+}

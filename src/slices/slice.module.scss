@@ -1,0 +1,56 @@
+.slice {
+	flex-wrap: wrap;
+}
+
+.withBackground,
+.withLightBackground,
+.withDarkBackground {
+	--bg-color: var(--color-light);
+
+	position: relative;
+
+	&::after {
+		@extend %fullWidth;
+
+		content: '';
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		height: 100%;
+		background-color: var(--bg-color);
+	}
+}
+
+.withPadding {
+	padding: span(2) span(1);
+
+	@include desktop {
+		padding: span(2.5) span(2);
+	}
+}
+
+.withMargin {
+	border-radius: 4px;
+	margin: span(1);
+
+	@include desktop {
+		margin: span(2);
+	}
+}
+
+.withNav {
+	z-index: 3;
+}
+
+.withFullWidth {
+	@extend %fullWidth;
+
+	> * {
+		flex-wrap: wrap;
+	}
+
+	&.withNav {
+		@extend %fullWidthWithNav;
+	}
+}

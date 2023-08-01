@@ -1,0 +1,25 @@
+.newsletter {
+	position: fixed !important;
+	z-index: 1000 !important;
+}
+
+.transition {
+	position: relative;
+	min-height: var(--vh);
+	display: flex;
+	flex-direction: column;
+
+	&.isPopinOpened {
+		overflow: hidden scroll;
+	}
+}
+
+.main {
+}
+
+.exitPreview {
+	position: fixed;
+	z-index: 10000;
+	bottom: 2rem;
+	left: 2rem;
+}

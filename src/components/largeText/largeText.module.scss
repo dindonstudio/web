@@ -1,0 +1,89 @@
+.largeText {
+	overflow: hidden;
+	background-color: $white;
+
+	&Wrap {
+		position: relative;
+		padding-top: 10rem;
+		padding-bottom: 10rem;
+
+		@include desktop {
+			padding-top: 22rem;
+			padding-bottom: 22rem;
+		}
+	}
+
+	&Title {
+		position: relative;
+		z-index: 1;
+		line-height: 1;
+		text-align: center;
+
+		@include mobile {
+			margin: 0 span(1);
+			font-size: clampfont(5rem);
+		}
+
+		@include desktop {
+			margin: 0 span(3);
+			font-size: clampfont(12rem);
+		}
+
+		> div {
+			display: inline-block;
+		}
+	}
+
+	&Logo {
+		width: clampfont(12.5rem);
+		height: auto;
+
+		@include desktop {
+			width: clampfont(30rem);
+		}
+	}
+
+	&TopRightImage {
+		position: absolute;
+		z-index: 0;
+		top: 1rem;
+		right: span(-1.5);
+		width: span(6);
+
+		@include tablet {
+			top: -1rem;
+			right: span(-0.5);
+			bottom: auto;
+			width: span(4);
+		}
+
+		@include desktop {
+			top: 6rem;
+			right: span(3.5);
+			bottom: auto;
+			width: span(5);
+		}
+	}
+
+	&BottomLeftImage {
+		position: absolute;
+		z-index: 0;
+		bottom: 1rem;
+		left: span(-1.5);
+		width: span(7);
+
+		@include tablet {
+			top: auto;
+			left: span(-0.5);
+			width: span(4);
+		}
+
+		@include desktop {
+			top: auto;
+			right: auto;
+			bottom: 10rem;
+			left: span(0.5);
+			width: span(7);
+		}
+	}
+}

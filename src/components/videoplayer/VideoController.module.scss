@@ -1,0 +1,143 @@
+.overlay {
+	position: absolute;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.videoController {
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 span(1) span(1) span(1);
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	color: $white;
+
+	button {
+		font-size: inherit;
+	}
+
+	@include desktop {
+		padding: 0 span(1) span(1) span(1);
+	}
+}
+
+.element {
+	margin-right: 2rem;
+	white-space: nowrap;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.mute,
+.fullscreen {
+	position: relative;
+	transition: color 0.5s $expo-out;
+
+	&::after {
+		content: '';
+		display: block;
+		height: 1px;
+		position: absolute;
+		width: 100%;
+		top: 50%;
+		left: 0;
+		background: $white;
+		transition: transform 0.5s $expo-out;
+		transform: scaleX(0.0001) translateZ(0);
+		transform-origin: left center;
+		margin-top: -1px;
+	}
+
+	&.disabled {
+		color: rgba($black, 0.6);
+
+		&::after {
+			transform: scaleX(1) translateZ(0);
+		}
+	}
+}
+
+.mute,
+.play,
+.fullscreen {
+	flex-shrink: 0;
+}
+
+.progressBar {
+	position: relative;
+	width: 100%;
+	height: 20px;
+
+	.progress,
+	.loaded,
+	.progressInput {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	.progressInput {
+		left: 0;
+		width: 100%;
+		appearance: none;
+		cursor: pointer;
+		border: none;
+		padding: 0;
+		margin: 0;
+		user-select: none;
+		display: block;
+		z-index: 1;
+		background: none;
+
+		&:focus {
+			outline: none;
+		}
+
+		&::-webkit-slider-thumb {
+			opacity: 0;
+		}
+	}
+
+	.progressWrapper {
+		position: absolute;
+		z-index: 0;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		margin-top: -1px;
+		background: rgba($white, 0.2);
+		border-radius: 2px;
+		overflow: hidden;
+	}
+
+	.progress {
+		right: 100%;
+		z-index: 1;
+		background: $white;
+		transition: transform 0.1s $expo-out;
+	}
+
+	.loaded {
+		right: 100%;
+		z-index: 0;
+		background: $white;
+		opacity: 0.3;
+		transition: transform 0.3s $expo-out;
+	}
+}
+
+.isHidden {
+	display: none;
+}

@@ -1,0 +1,72 @@
+.keen {
+  color: #17403e;
+  padding: 0 0rem 0rem;
+width: 100%;
+
+  .keenSlide {
+    @include desktop {
+      height: 47rem;
+
+    }
+	background: rgba(247, 246, 242, 0.95);
+opacity: 0;
+    border-radius: 2rem;
+    padding: 0 2.5rem ;
+    height: auto;
+    overflow: hidden;
+    width: 100%;
+  }
+
+}
+.insideSlide li{
+	list-style: inside;
+	padding-left: 1.28571429em;
+    text-indent: -1.28571429em;
+}
+.arrow{
+
+	position: absolute;
+}
+.sliderThumbnail{
+  position: relative;
+  background: rgba(247, 246, 242, 0.95);
+  width: span(10);
+  opacity: 0;
+  color: #17403e;
+  border-radius: 2Rem;
+padding: 2rem span(0.5);
+
+width: 100%;
+  @include desktop {
+    width: span(24);
+    justify-content: center;
+    margin-left: span(3);
+    padding: 4rem;
+  }
+}  .title {
+  text-align: center;
+  max-width: 13ch;
+  margin: 0 auto;
+  text-align: center;
+  border-right: 1px solid #17403e;
+  height: 100%;
+  overflow: visible;
+  &:hover{
+    cursor: pointer;
+  }
+}
+ .title.active {
+  text-decoration: underline;
+}
+.Thumbnail{
+  margin: 0 span(1);
+  @include desktop {
+  margin: 0;
+  }
+  .keenSlide{
+    overflow: visible !important;
+    &:nth-last-child(1) .title{
+      border-right: 0px solid;
+    }
+  }
+}

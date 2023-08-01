@@ -1,0 +1,139 @@
+.stats {
+	position: relative;
+
+	.container {
+		padding: 11rem span(1) 6rem;
+
+		@include tablet {
+			padding: 100px span(1);
+		}
+
+		@include desktop {
+			padding: 15rem span(1) 10rem;
+		}
+	}
+
+	.intro {
+		margin-bottom: 8rem;
+		color: $white;
+
+		@include mobile {
+			text-align: center;
+		}
+
+		@include desktop {
+			display: flex;
+			align-items: center;
+			margin-top: 18rem;
+			margin-bottom: 24rem;
+		}
+	}
+
+	.title {
+		@include desktop {
+			width: span(15);
+		}
+	}
+
+	.excerpt {
+		@include mobile {
+			margin: 3rem span(2) 0;
+		}
+
+		@include desktop {
+			width: span(8);
+			margin-left: span(2);
+		}
+	}
+
+	.items {
+		@include desktop {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+
+	.item {
+		display: flex;
+		height: 32.5rem;
+		flex-direction: column;
+		justify-content: flex-end;
+		padding: span(2);
+		border-top: 1px solid $greenDark;
+
+		@include mobile {
+			&:first-child {
+				border-top: 0;
+			}
+		}
+
+		@include tablet {
+			height: 350px;
+			padding: 50px;
+		}
+
+		@include desktop {
+			width: span(10);
+			height: 51rem;
+			padding: 4rem span(1);
+
+			&:nth-child(even) {
+				border-left: 1px solid $greenDark;
+			}
+
+			&:nth-child(-n+2) {
+				border-top: 0;
+			}
+
+			&:nth-child(4n+1),
+			&:nth-child(4n+4) {
+				width: span(18);
+			}
+
+			&:nth-child(4n+2),
+			&:nth-child(4n+3) {
+				.itemWrap {
+					width: span(6);
+				}
+			}
+		}
+
+		&Title {
+			margin-bottom: 1.6rem;
+		}
+
+		&:nth-child(4n+1) {
+			background-color: #d3ded4;
+		}
+
+		&:nth-child(4n+2) {
+			background-color: #5647f8;
+			color: $white;
+		}
+
+		&:nth-child(4n+3) {
+			background-color: $green;
+		}
+
+		&:nth-child(4n+4) {
+			background-color: $yellow;
+		}
+	}
+}
+
+.background {
+	.circle {
+		top: -50rem;
+		left: 50%;
+		width: 80rem;
+		margin-left: -40rem;
+		opacity: 1;
+
+		@include desktop {
+			top: 0;
+			width: span(19);
+			margin-top: span(-10);
+			margin-left: span(-10);
+		}
+	}
+}

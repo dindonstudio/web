@@ -1,0 +1,107 @@
+.accordion {
+	color: var(--color-dark);
+
+	&.inLine {
+		@include desktop {
+			flex: 1;
+		}
+	}
+
+	&.onTheLeft {
+		@include desktop {
+			padding: 0 0 0 span(2);
+		}
+	}
+
+	&.onTheRight {
+		@include desktop {
+			padding: 0 span(2) 0 0;
+		}
+	}
+
+	.description {
+		margin-bottom: 8rem;
+		font-size: 1.4rem;
+		line-height: 1.5;
+		text-align: center;
+
+		@include desktop {
+			width: span(10);
+			margin-bottom: 10rem;
+			margin-left: span(17);
+			text-align: left;
+		}
+	}
+
+	:global {
+		.accordion__item {
+			&::after {
+				content: '';
+				display: block;
+				border-bottom: 1px solid;
+				opacity: 0.15;
+			}
+		}
+
+		.accordion__button {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 2rem 0;
+			cursor: pointer;
+
+			@include desktop {
+				padding: 3rem 0;
+			}
+
+			button {
+				flex: 0 0 auto;
+				margin-left: 1rem;
+			}
+
+			.minus {
+				display: none;
+			}
+
+			@include hover {
+				button {
+					color: var(--color-light);
+					background-color: var(--color-dark);
+				}
+			}
+
+			&[aria-expanded='true'] {
+				.minus {
+					display: block;
+				}
+
+				.plus {
+					display: none;
+				}
+			}
+		}
+
+		.accordion__panel {
+			padding-bottom: 3rem;
+		}
+
+		.accordion__panel-wrapper {
+			display: block;
+			height: 0;
+			transition: height 0.8s $expo-out, visibility 0.8s;
+			overflow: hidden;
+
+			&[hidden] {
+				visibility: hidden;
+			}
+		}
+	}
+
+	.btn {
+		margin-top: 2rem;
+
+		@include desktop {
+			margin-top: 4rem;
+		}
+	}
+}

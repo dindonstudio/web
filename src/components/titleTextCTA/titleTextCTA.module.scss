@@ -1,0 +1,57 @@
+.titleTextCTA {
+
+	// @include mobile {
+	// 	margin-bottom: span(1);
+	// }
+
+	// @include desktop {
+	// 	margin-bottom: span(1);
+	// }
+
+	.surtitle {
+		margin-bottom: 1rem;
+	}
+
+	.title {
+		margin-top: 1rem;
+	}
+
+	.text {
+		margin-top: 1.5rem;
+
+		@include mobile {
+		}
+
+		@include desktop {
+			margin-top: 3rem;
+		}
+
+		&.setWidth {
+			@include desktop {
+				width: span(8);
+			}
+		}
+	}
+
+	.cta {
+		margin-top: 3rem;
+		position: relative;
+		z-index: 20;
+	}
+
+	&.center {
+		text-align: center;
+
+		.text {
+			@include mobile {
+				margin-left: span(1);
+				margin-right: span(1);
+			}
+
+			@include desktop {
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+	}
+}

@@ -1,0 +1,59 @@
+@function strip-unit($number) {
+	@if type-of($number) == 'number' and not unitless($number) {
+		@return math.div($number, ($number * 0 + 1));
+	}
+
+	@return $number;
+}
+
+@function minfont($rem) {
+	@return min(#{$rem}, #{strip-unit($rem) * 12}px);
+}
+
+@function maxfont($rem) {
+	@return max(#{$rem}, #{strip-unit($rem) * 8}px);
+}
+
+@function clampfont($rem) {
+	@return clamp(#{strip-unit($rem) * 8}px, #{$rem}, #{strip-unit($rem) * 12}px);
+}
+
+@mixin font-smoothing($value: on) {
+	@if $value == on {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	} @else {
+		-webkit-font-smoothing: subpixel-antialiased;
+		-moz-osx-font-smoothing: auto;
+	}
+}
+
+@mixin variants() {
+	$variants-color: (
+		'white' $white,
+		'black' $black,
+	);
+
+	@each $name, $hex in $variants-color {
+		&.#{$name} {
+			fill: $hex;
+			color: $hex;
+		}
+	}
+}
+
+@mixin line($color: $black, $height: 1px, $top: off) {
+	content: '';
+	width: 100%;
+	height: $height;
+	position: absolute;
+
+	@if $top == on {
+		top: 0;
+	} @else {
+		bottom: 0;
+	}
+
+	left: 0;
+	background: $color;
+}

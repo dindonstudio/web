@@ -1,0 +1,108 @@
+.featureDiptych {
+	position: relative;
+	z-index: 0;
+	margin-top: 6rem;
+	margin-bottom: 6rem;
+
+	@include desktop {
+		display: flex;
+		justify-content: flex-start;
+		margin: 30rem 0;
+	}
+}
+
+.features {
+	margin-top: 3rem;
+
+	@include desktop {
+		margin: 0 span(1) 0 span(4);
+	}
+}
+
+.imagesCol {
+	display: flex;
+	position: relative;
+	flex: 1 1 auto;
+	justify-content: center;
+
+	@include desktop {
+		width: span(15);
+		height: 100%;
+		order: 2;
+		margin-left: span(1);
+	}
+}
+
+.image {
+	width: span(9);
+
+	@include tablet {
+		width: span(7);
+	}
+
+	@include desktop {
+		width: span(7);
+	}
+
+	&Rounded {
+		& > span {
+			border-radius: 1.6rem;
+			// box-shadow: -1px -1px 0px #fefefe, 5px 5px 20px rgba(173, 178, 189, 0.16);
+		}
+	}
+}
+
+.phone {
+	width: span(11);
+	margin: 2rem auto 0;
+
+	@include desktop {
+		margin: 0;
+	}
+}
+
+.circle {
+	top: 50%;
+	left: 30%;
+	width: 120rem;
+	margin-top: -60rem;
+}
+
+.hcenter {
+	text-align: center;
+
+	@include desktop {
+		justify-content: center;
+	}
+
+	.features {
+		@include desktop {
+			width: span(12);
+			margin: 0;
+		}
+	}
+}
+
+.hleft {
+	@include desktop {
+		justify-content: flex-start;
+	}
+}
+
+.vtop {
+	@include desktop {
+		align-items: flex-start;
+	}
+}
+
+.vcenter {
+	@include desktop {
+		align-items: center;
+	}
+}
+
+.vbottom {
+	@include desktop {
+		align-items: flex-end;
+	}
+}

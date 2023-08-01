@@ -1,0 +1,51 @@
+.h2 {
+	margin-bottom: 2rem;
+}
+
+.h3 {
+	margin-top: 3rem;
+
+	@include desktop {
+		margin-top: 5rem;
+	}
+}
+
+.h3,
+.h4 {
+	margin-bottom: 2.3rem;
+
+	@include desktop {
+		margin-bottom: 2rem;
+	}
+}
+
+.h5 {
+	margin: 0.5rem 0;
+
+	@include desktop {
+		margin: 0.5rem 0;
+	}
+}
+
+.p {
+	margin-bottom: 3rem;
+}
+
+.a {
+	// text-decoration: underline;
+}
+
+.sup {
+	font-size: 0.4em;
+	vertical-align: baseline;
+	position: relative;
+	line-height: 0;
+	top: -1em;
+}
+
+.p,
+.blockquote {
+	&:last-child {
+		margin-bottom: 0;
+	}
+}

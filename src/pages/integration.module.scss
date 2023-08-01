@@ -1,0 +1,22 @@
+.dealflow {
+	background: $pinkDark;
+	color: $greenDark;
+}
+
+.intro {
+	@include mobile {
+		overflow: hidden;
+	}
+}
+
+.main {
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+
+.largeTitleCta,
+.footer {
+	position: relative;
+	z-index: 1;
+}

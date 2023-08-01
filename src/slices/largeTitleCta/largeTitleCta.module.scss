@@ -1,0 +1,93 @@
+.largeTitleCta {
+	position: relative;
+	overflow: hidden;
+	background-color: var(--color-bg);
+	color: var(--color-text, $greenDark);
+
+	.container {
+		padding: 6.6rem span(1);
+
+		@include desktop {
+			padding: 8rem span(1);
+		}
+	}
+
+	.titleWrapper {
+		position: relative;
+	}
+
+	.title {
+		margin: 0 -0.08em;
+		white-space: nowrap;
+
+		> * {
+			position: relative;
+			overflow: hidden;
+
+			@include desktop {
+				margin-right: span(-1);
+				margin-left: span(-1);
+				padding: 0 span(1);
+				line-height: 0.85;
+			}
+
+			&:nth-child(even) {
+				text-align: right;
+			}
+
+			&:first-child,
+			&:last-child {
+				z-index: 1;
+			}
+		}
+
+		span {
+			display: inline-block;
+			transform-origin: top;
+		}
+	}
+
+	.text {
+		position: relative;
+		z-index: 1;
+		margin-top: 3.5rem;
+		text-align: center;
+
+		@include desktop {
+			margin-top: 1.4rem;
+		}
+
+		.cta:not(:first-child) {
+			margin-top: 3rem;
+
+			@include tablet {
+				margin-top: 30px;
+			}
+		}
+	}
+}
+
+.image {
+	position: relative;
+	width: 100%;
+	height: 100%;
+
+	&Wrap {
+		display: flex;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		align-items: center;
+		justify-content: center;
+
+		> div {
+			height: 100%;
+		}
+	}
+
+	> span {
+		max-height: 100%;
+	}
+}

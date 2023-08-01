@@ -1,0 +1,110 @@
+.integrationsList {
+	z-index: 1;
+	padding: 10rem span(1);
+	text-align: center;
+
+	@include desktop {
+		display: flex;
+		align-items: flex-start;
+		padding: 20rem 0 12rem;
+		text-align: left;
+	}
+}
+
+.nav {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	flex-shrink: 0;
+	margin-bottom: 6rem;
+	padding: span(1);
+	background: rgba($white, 0.2);
+	border-radius: 0.5rem;
+
+	@include desktop {
+		width: span(4.5);
+		margin: 0 span(1);
+		padding: span(0.5);
+	}
+}
+
+.navTitle {
+	margin-bottom: 1rem;
+}
+
+.navEntry {
+	margin-bottom: 1rem;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.content {
+	flex-shrink: 0;
+
+	@include desktop {
+		width: span(22.5);
+	}
+}
+
+.category {
+	margin-bottom: 6rem;
+
+	@include desktop {
+		margin-bottom: 12rem;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.title {
+	margin-bottom: 3rem;
+
+	@include desktop {
+		width: span(12.5);
+		margin-bottom: 6rem;
+	}
+}
+
+.cards {
+	margin-bottom: - span(0.5);
+
+	@include desktop {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: - span(0.5);
+	}
+}
+
+.card {
+	@include mobile {
+		width: 100% !important;
+		margin-bottom: 1.5rem !important;
+	}
+
+	@include desktop {
+		margin: 0 span(0.5) span(0.5) 0 !important;
+	}
+}
+
+.dealflowLogo {
+	@include desktop {
+		position: fixed;
+		z-index: 0;
+		top: 0;
+		left: span(1.5);
+		opacity: 0.2;
+		color: $white;
+	}
+
+	svg {
+		@include desktop {
+			width: 72rem !important;
+			height: 116.4rem !important;
+			opacity: 0.3;
+		}
+	}
+}

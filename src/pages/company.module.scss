@@ -1,0 +1,16 @@
+.company {
+	position: relative;
+	z-index: 0;
+	overflow: hidden;
+	background-color: $pinkDark;
+
+	.largeTitleCta {
+		&Image {
+			width: span(11);
+
+			@include desktop {
+				width: span(20);
+			}
+		}
+	}
+}

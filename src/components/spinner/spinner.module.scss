@@ -1,0 +1,46 @@
+.spinner {
+	display: block;
+	position: relative;
+	width: 3rem;
+	height: 3rem;
+	font-size: 0.4rem;
+	pointer-events: none;
+
+	&::before,
+	&::after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		transform: translateZ(0);
+		text-indent: -9999em;
+	}
+
+	&::before {
+		opacity: 0.2;
+		border: 0.6em solid currentcolor;
+	}
+
+	&::after {
+		border-top: 0.6em solid transparent;
+		border-right: 0.6em solid transparent;
+		border-bottom: 0.6em solid transparent;
+		border-left: 0.6em solid currentcolor;
+		transform: translateZ(0);
+		animation: load8 0.7s infinite linear;
+	}
+
+	@keyframes load8 {
+		0% {
+			transform: rotate(0deg) translateZ(0);
+		}
+
+		100% {
+			transform: rotate(360deg) translateZ(0);
+		}
+	}
+}
