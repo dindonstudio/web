@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://undefined
+
+# Sitemaps
+Sitemap: https://undefined/sitemap.xml
+Sitemap: https://undefined/server-sitemap.xml

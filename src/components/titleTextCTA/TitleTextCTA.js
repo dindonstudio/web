@@ -1,7 +1,7 @@
 import cn from 'classnames'
 import styles from './titleTextCTA.module.scss'
 import CustomBlockContent from 'components/customBlockContent/CustomBlockContent'
-import {colors} from '../../../config/variables'
+import {colors} from '../../.@config/variables'
 import Badge from 'components/badge/Badge'
 import Title from 'components/title/Title'
 import Button, {ButtonTheme, ButtonVariant} from 'components/button/Button'
