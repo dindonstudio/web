@@ -1,6 +1,6 @@
 const fs = require('fs')
 // const path = require('path')
-const {locales, defaultLocale} = require('../config/languages')
+const {locales, defaultLocale} = require('./config/languages')
 const {rewrites} = require('./rewrites')
 const redirects = require('./redirects')
 const withMinifyClassNames = require('@numbered/next-minify-classnames')
