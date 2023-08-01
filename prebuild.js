@@ -1,4 +1,4 @@
-const {colors} = require('../config/variables')
+const {colors} = require('./config/variables')
 const fs = require('fs/promises')
 
 fs.writeFile(
